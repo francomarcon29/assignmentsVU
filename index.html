@@ -30,12 +30,7 @@
     <div class="container">
 
 
-        <section>
-
-            <p>box 1</p>
-        </section>
-
-        <section>
+        <section id="main_table">
             <h2>Models we offer</h2>
             <p>These are all the phone models that our store has to offer, pick the right one!</p>
 
@@ -56,16 +51,14 @@
                         <td>Pixel 6</td>
                         <td>Android</td>
                         <td>6.4</td>
-                        <td><img src="https://i.imgur.com/mFlscoH.png"
-                                width="150"></td>
+                        <td><img src="https://i.imgur.com/mFlscoH.png" width="150"></td>
                     </tr>
                     <tr>
                         <td>Apple</td>
                         <td>iPhone 13</td>
                         <td>iOS</td>
                         <td>6.1</td>
-                        <td><img src="https://i.imgur.com/s23UJbf.png"
-                                width="140"></td>
+                        <td><img src="https://i.imgur.com/s23UJbf.png" width="140"></td>
                     </tr>
                     <tr>
                         <td>Samsung</td>
@@ -79,17 +72,112 @@
                             <td><input required type="text" id="brand" name="brand" placeholder="Brand"></td>
                             <td><input required type="text" id="model" name="model" placeholder="Model"></td>
                             <td><input required type="text" id="os" name="os" placeholder="OS"></td>
-                            <td><input required type="number" id="screensize" name="screensize" placeholder="Screensize"></td>
+                            <td><input required type="number" id="screensize" name="screensize" placeholder="Screensize">
+                            </td>
                             <td><input required type="text" id="image" name="image" placeholder="Image URI"></td>
                         </tr>
                     </form>
                 </tbody>
+                <tfoot> <tr>
+                    <td colspan="5">
+
+                        <input type="submit" value="Submit a new model" form="model-form" id="model-submit"/>
+
+                    </td>
+                </tr>
+                </tfoot>
             </table>
-            <input type="submit" value="Submit a new model" form="model-form" id="model-submit"/>
+            
         </section>
 
-        <section>
-            <h2>Camera Specifications</h2>
+
+</div>
+
+<h2>Specifications</h2>
+
+<div class="container">
+        <section class="specs_phones">
+            <h2>Camera</h2>
+            <ul id="camera-specs">
+                <li id="list-google"><strong>Google Pixel 6</strong>
+                    <ol>
+                        <li>50MP Camera</li>
+                        <li>12MP Camera</li>
+                    </ol>
+                </li>
+                <li id="list-apple"><strong>iPhone 13</strong>
+                    <ol>
+                        <li>12MP Wide Camera</li>
+                        <li>12MP Ultrawide Camera</li>
+                    </ol>
+                </li>
+                <li id="list-samsung"><strong>Galaxy S21</strong>
+                    <ol>
+                        <li>12MP Wide Camera</li>
+                        <li>8MP Telephoto Camera</li>
+                        <li>12MP Ultrawide Camera</li>
+                    </ol>
+                </li>
+            </ul>
+
+
+        </section>
+
+        <section class="specs_phones">
+            <h2>Camera</h2>
+            <ul id="camera-specs">
+                <li id="list-google"><strong>Google Pixel 6</strong>
+                    <ol>
+                        <li>50MP Camera</li>
+                        <li>12MP Camera</li>
+                    </ol>
+                </li>
+                <li id="list-apple"><strong>iPhone 13</strong>
+                    <ol>
+                        <li>12MP Wide Camera</li>
+                        <li>12MP Ultrawide Camera</li>
+                    </ol>
+                </li>
+                <li id="list-samsung"><strong>Galaxy S21</strong>
+                    <ol>
+                        <li>12MP Wide Camera</li>
+                        <li>8MP Telephoto Camera</li>
+                        <li>12MP Ultrawide Camera</li>
+                    </ol>
+                </li>
+            </ul>
+
+
+        </section>
+        <section class="specs_phones">
+            <h2>Camera</h2>
+            <ul id="camera-specs">
+                <li id="list-google"><strong>Google Pixel 6</strong>
+                    <ol>
+                        <li>50MP Camera</li>
+                        <li>12MP Camera</li>
+                    </ol>
+                </li>
+                <li id="list-apple"><strong>iPhone 13</strong>
+                    <ol>
+                        <li>12MP Wide Camera</li>
+                        <li>12MP Ultrawide Camera</li>
+                    </ol>
+                </li>
+                <li id="list-samsung"><strong>Galaxy S21</strong>
+                    <ol>
+                        <li>12MP Wide Camera</li>
+                        <li>8MP Telephoto Camera</li>
+                        <li>12MP Ultrawide Camera</li>
+                    </ol>
+                </li>
+            </ul>
+
+
+        </section>
+
+        <section class="specs_phones">
+            <h2>Camera</h2>
             <ul id="camera-specs">
                 <li id="list-google"><strong>Google Pixel 6</strong>
                     <ol>
@@ -132,15 +220,22 @@
 
 </body>
 <footer>
-    <h3>Contact</h3>
+
+    <div class="footer">
+<h3>Contact</h3>
     <dl>
         <dt>Website</dt>
-        <dd><a href="https://www.vodafone.nl/" id="vodafone">Click here to visit our other store</a></dd>
+        <dd><a href="https://www.vodafone.nl/" id="vodafone" target="_blank">Click here to visit our other store</a>
+        </dd>
         <dt>Location</dt>
         <dd><iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d77986.1358564069!2d4.808910440995633!3d52.35107469656807!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c609c0d08d3977%3A0xa0c1766e58bef77e!2sVodafone%20en%20Ziggo!5e0!3m2!1sen!2snl!4v1641979730963!5m2!1sen!2snl"
                 width="200" height="100" style="border:0;" allowfullscreen="" loading="lazy"></iframe></dd>
     </dl>
+
+    </div>
+
+    
 </footer>
 
 </html>
