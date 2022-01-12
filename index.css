@@ -1,7 +1,6 @@
 *{
     font-family: 'Poppins', sans-serif;
     font-size: normal;
-    font-weight: normal;
     font-variant: normal;
     font-style: normal;
 
@@ -21,7 +20,6 @@ nav {
 
 section {
     width: 500px;
-    height: 500px;
 }
 
 h1 {
@@ -47,6 +45,10 @@ td {
     border: 1px solid black;
 }
 
+#camera-specs > li > ol > li::marker {
+    font-weight: bold;
+}
+
 #camera-specs li {
     list-style-position: inside;
     margin-top: 5px;
@@ -66,4 +68,18 @@ td {
 
 #camera-specs ol {
     list-style: decimal;
+}
+
+#s21-img {
+    margin-top: 5px;
+    margin-left: 6px;
+    margin-right: 20px;
+}
+
+caption {
+    margin-bottom: 5px;
+}
+
+#model-submit {
+    margin-top: 5px;
 }

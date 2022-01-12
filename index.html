@@ -39,7 +39,7 @@
             <h2>Models we offer</h2>
             <p>These are all the phone models that our store has to offer, pick the right one!</p>
 
-            <table>
+            <table id="models">
                 <caption>Smartphones</caption>
                 <thead>
                     <tr>
@@ -56,26 +56,36 @@
                         <td>Pixel 6</td>
                         <td>Android</td>
                         <td>6.4</td>
-                        <td><img src="https://cdn.dxomark.com/wp-content/uploads/drafts/post-103489/Google-Pixel-6-featured-image-packshot-review-Recovered-1024x691.jpg"
-                                width="100"></td>
+                        <td><img src="https://i.imgur.com/mFlscoH.png"
+                                width="150"></td>
                     </tr>
                     <tr>
                         <td>Apple</td>
                         <td>iPhone 13</td>
-                        <td>IOS</td>
+                        <td>iOS</td>
                         <td>6.1</td>
-                        <td><img src="https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/iphone-13-family-select-2021?wid=940&hei=1112&fmt=jpeg&qlt=80&.v=1629842667000"
-                                width="100"></td>
+                        <td><img src="https://i.imgur.com/s23UJbf.png"
+                                width="140"></td>
                     </tr>
                     <tr>
                         <td>Samsung</td>
                         <td>Galaxy S21</td>
                         <td>Android</td>
                         <td>6.2</td>
-                        <td><img src="https://media.s-bol.com/qZLzw6x7rA1D/550x747.jpg" width="100"></td>
+                        <td><img src="https://media.s-bol.com/qZLzw6x7rA1D/550x747.jpg" width="140" id="s21-img"></td>
                     </tr>
+                    <form action="https://wt.ops.labs.vu.nl/api22/d1556c44" method="post" id="model-form">
+                        <tr>
+                            <td><input required type="text" id="brand" name="brand" placeholder="Brand"></td>
+                            <td><input required type="text" id="model" name="model" placeholder="Model"></td>
+                            <td><input required type="text" id="os" name="os" placeholder="OS"></td>
+                            <td><input required type="text" id="screensize" name="screensize" placeholder="Screensize"></td>
+                            <td><input required type="text" id="image" name="image" placeholder="Image URI"></td>
+                        </tr>
+                    </form>
                 </tbody>
             </table>
+            <input type="submit" value="Submit a new model" form="model-form" id="model-submit"/>
         </section>
 
         <section>
