@@ -88,3 +88,8 @@ caption {
 input[type=text], input[type=number] {
     width: 160px;
 }
+
+#reviews {
+    columns: 2;
+    orphans: 2;
+}
