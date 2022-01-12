@@ -15,9 +15,22 @@ nav {
     background-color: red;
 }
 
-section {
-    width: 500px;
+#main_table {
+    width: 100%;
 }
+
+#models {
+
+text-align: center;
+
+
+}
+
+
+.specs_phones {
+    width: 25%;
+}
+
 
 h1 {
     color: aqua;
@@ -88,3 +101,18 @@ caption {
 input[type=text] {
     width: 160px;
 }
+
+.footer {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+
+
+
+@media print {
+    h1 {page-break-before: always;}
+    footer {page-break-after: always;}
+
+  }
