@@ -1,0 +1,22 @@
+
+.container{
+    margin: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+nav{
+
+    background-color: red;
+}
+section{
+    width: 500px;
+    height: 500px;
+}
+
+h1{
+color: aqua;
+text-align: center;
+
+}
