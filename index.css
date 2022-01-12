@@ -20,17 +20,12 @@ nav {
 }
 
 #models {
-
-text-align: center;
-
-
+    text-align: center;
 }
-
 
 .specs_phones {
     width: 25%;
 }
-
 
 h1 {
     color: aqua;
@@ -107,18 +102,27 @@ input[type=text], input[type=number] {
     /* ask TA what this does */
     orphans: 2;
     widows: 2;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
+
+#reviews > div {
+    width: 30%;
+}
+
 .footer {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
 }
 
-
-
-
 @media print {
-    h1 {page-break-before: always;}
-    footer {page-break-after: always;}
-
+    h1 {
+        page-break-before: always;
+    }
+    footer {
+        page-break-after: always;
+    }
   }
