@@ -2,9 +2,7 @@
     font-family: 'Poppins', sans-serif;
     font-size: normal;
     font-variant: normal;
-    font-style: normal;
 }
-
 
 .container {
     margin: 50px;
@@ -24,6 +22,10 @@ section {
 h1 {
     color: aqua;
     text-align: center;
+}
+
+figcaption {
+    font-style: italic;
 }
 
 #slogan {
