@@ -1,9 +1,8 @@
-*{
+* {
     font-family: 'Poppins', sans-serif;
     font-size: normal;
     font-variant: normal;
     font-style: normal;
-
 }
 
 
@@ -81,5 +80,9 @@ caption {
 }
 
 #model-submit {
-    margin-top: 5px;
+    margin-top: 10px;
+}
+
+input[type=text] {
+    width: 160px;
 }
