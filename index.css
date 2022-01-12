@@ -19,6 +19,10 @@ h1 {
     text-align: center;
 }
 
+#slogan {
+    text-align: center;
+}
+
 table {
     caption-side: top;
     border-color: black;
