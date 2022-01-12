@@ -4,11 +4,27 @@
     font-variant: normal;
 }
 
+body{
+
+    background-color: rgb(220,220,220);
+
+}
+
+
+
+footer{
+background-color: black;
+
+}
+
+
 .container {
     margin: 50px;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
+    
+
 }
 
 nav {
@@ -23,9 +39,25 @@ nav {
     text-align: center;
 }
 
-.specs_phones {
-    width: 25%;
+#specs_phones {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+    
 }
+
+#specs_phones > div {
+    width: 24.5%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+#specs_phones > div > strong {
+    text-align: center;
+}
+
 
 h1 {
     color: aqua;
@@ -54,11 +86,11 @@ td {
     border: 1px solid black;
 }
 
-#camera-specs > li > ol > li::marker {
+#specs_info > li > ol > li::marker {
     font-weight: bold;
 }
 
-#camera-specs li {
+#specs_info li {
     list-style-position: inside;
     margin-top: 5px;
 }
@@ -110,13 +142,28 @@ input[type=text], input[type=number] {
 
 #reviews > div {
     width: 30%;
+    text-align: center;
+    padding: 15px;
+    background-color: white;
+    border-radius: 60px;
 }
 
-.footer {
+
+#footer_box {
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
-    flex-direction: row;
+    justify-content: space-between;
 }
+
+#footer_box > div{
+margin: 20px;
+width: 30%;
+color: white;
+
+}
+
+
 
 @media print {
     h1 {

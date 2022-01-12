@@ -23,12 +23,11 @@
     <p id="slogan">For <em>all</em> your smarthphone needs</p>
     <figure>
         <img src="https://media.istockphoto.com/vectors/online-shop-banner-vector-id823256052?k=20&m=823256052&s=170667a&w=0&h=H-uOquER6j1AoZCzMdRwypiNQJtCC_IgK7SJtdgX5vc="
-            alt="plain grey" width="1200" height="300">
+            alt="plain grey" id="banner">
         <figcaption>All rights reserved &copy;</figcaption>
     </figure>
-    <h1>Mobile phone store</h1>
+    
     <div class="container">
-
 
         <section id="main_table">
             <h2>Models we offer</h2>
@@ -72,184 +71,243 @@
                             <td><input required type="text" id="brand" name="brand" placeholder="Brand"></td>
                             <td><input required type="text" id="model" name="model" placeholder="Model"></td>
                             <td><input required type="text" id="os" name="os" placeholder="OS"></td>
-                            <td><input required type="number" id="screensize" name="screensize" placeholder="Screensize">
+                            <td><input required type="number" id="screensize" name="screensize"
+                                    placeholder="Screensize">
                             </td>
                             <td><input required type="text" id="image" name="image" placeholder="Image URI"></td>
                         </tr>
                     </form>
                 </tbody>
-                <tfoot> <tr>
-                    <td colspan="5">
+                <tfoot>
+                    <tr>
+                        <td colspan="5">
 
-                        <input type="submit" value="Submit a new model" form="model-form" id="model-submit"/>
+                            <input type="submit" value="Submit a new model" form="model-form" id="model-submit" />
 
-                    </td>
-                </tr>
+                        </td>
+                    </tr>
                 </tfoot>
             </table>
-            
-        </section>
-
-
-</div>
-
-<h2>Specifications</h2>
-
-<div class="container">
-        <section class="specs_phones">
-            <h2>Camera</h2>
-            <ul id="camera-specs">
-                <li id="list-google"><strong>Google Pixel 6</strong>
-                    <ol>
-                        <li>50MP Camera</li>
-                        <li>12MP Camera</li>
-                    </ol>
-                </li>
-                <li id="list-apple"><strong>iPhone 13</strong>
-                    <ol>
-                        <li>12MP Wide Camera</li>
-                        <li>12MP Ultrawide Camera</li>
-                    </ol>
-                </li>
-                <li id="list-samsung"><strong>Galaxy S21</strong>
-                    <ol>
-                        <li>12MP Wide Camera</li>
-                        <li>8MP Telephoto Camera</li>
-                        <li>12MP Ultrawide Camera</li>
-                    </ol>
-                </li>
-            </ul>
-
 
         </section>
 
-        <section class="specs_phones">
-            <h2>Camera</h2>
-            <ul id="camera-specs">
-                <li id="list-google"><strong>Google Pixel 6</strong>
-                    <ol>
-                        <li>50MP Camera</li>
-                        <li>12MP Camera</li>
-                    </ol>
-                </li>
-                <li id="list-apple"><strong>iPhone 13</strong>
-                    <ol>
-                        <li>12MP Wide Camera</li>
-                        <li>12MP Ultrawide Camera</li>
-                    </ol>
-                </li>
-                <li id="list-samsung"><strong>Galaxy S21</strong>
-                    <ol>
-                        <li>12MP Wide Camera</li>
-                        <li>8MP Telephoto Camera</li>
-                        <li>12MP Ultrawide Camera</li>
-                    </ol>
-                </li>
-            </ul>
+
+
+        <section>
+            <h2>Specifications</h2>
+
+            <div id="specs_phones">
+
+                <div>
+
+                    <h2>Camera</h2>
+                    <ul id="specs_info">
+                        <li id="list-google"><strong>Google Pixel 6</strong>
+                            <ol>
+                                <li>50MP Camera</li>
+                                <li>12MP Camera</li>
+                            </ol>
+                        </li>
+                        <li id="list-apple"><strong>iPhone 13</strong>
+                            <ol>
+                                <li>12MP Wide Camera</li>
+                                <li>12MP Ultrawide Camera</li>
+                            </ol>
+                        </li>
+                        <li id="list-samsung"><strong>Galaxy S21</strong>
+                            <ol>
+                                <li>12MP Wide Camera</li>
+                                <li>8MP Telephoto Camera</li>
+                                <li>12MP Ultrawide Camera</li>
+                            </ol>
+                        </li>
+                    </ul>
+
+
+
+                </div>
+
+                <div>
+
+                    <h2>Memory</h2>
+                    <ul id="specs_info">
+                        <li id="list-google"><strong>Google Pixel 6</strong>
+                            <ol>
+                                <li>Card slot: No</li>
+                                <li>128GB 8GB RAM, 256GB 8GB RAM</li>
+                                <li>UFS 3.1</li>
+                            </ol>
+                        </li>
+                        <li id="list-apple"><strong>iPhone 13</strong>
+                            <ol>
+                                <li>Card slot: No</li>
+                                <li>128GB 4GB RAM, 256GB 4GB RAM, 512GB 4GB RAM</li>
+                                <li>NVMe</li>
+                            </ol>
+                        </li>
+                        <li id="list-samsung"><strong>Galaxy S21</strong>
+                            <ol>
+                                <li>Card slot: No</li>
+                                <li>128GB 8GB RAM, 256GB 8GB RAM</li>
+                                <li>UFS 3.1</li>
+                            </ol>
+                        </li>
+                    </ul>
+
+
+
+                </div>
+
+
+
+
+
+                <div>
+
+                    <h2>Sound</h2>
+                    <ul id="specs_info">
+                        <li id="list-google"><strong>Google Pixel 6</strong>
+                            <ol>
+                                <li>Loudspeaker: Yes, with stereo speakers/li>
+                                <li>3.55 jack: No</li>
+                            </ol>
+                        </li>
+                        <li id="list-apple"><strong>iPhone 13</strong>
+                            <ol>
+                                <li>Loudspeaker: Yes, with stereo speakers/li>
+                                <li>3.55 jack: No</li>
+                            </ol>
+                        </li>
+                        <li id="list-samsung"><strong>Galaxy S21</strong>
+                            <ol>
+                                <li>Loudspeaker: Yes, with stereo speakers/li>
+                                <li>3.55 jack: No</li>
+                            </ol>
+                        </li>
+                    </ul>
+
+
+
+                </div>
+
+
+
+                <div>
+
+                    <h2>Battery</h2>
+                    <ul id="specs_info">
+                        <li id="list-google"><strong>Google Pixel 6</strong>
+                            <ol>
+                                <li>Type: Li-Ion 4614 mAh, non-removable</li>
+                                <li>Fast charging 30W, 50% in 30 min</li>
+                                <li>Fast wireless charging 21W</li>
+                            </ol>
+                        </li>
+                        <li id="list-apple"><strong>iPhone 13</strong>
+                            <ol>
+                                <li>Type: Li-Ion 3240 mAh, non-removable</li>
+                                <li>Fast charging (23W, unofficial rating), 50% in 30 min</li>
+                                <li>MagSafe wireless charging 15W</li>
+                            </ol>
+                        </li>
+                        <li id="list-samsung"><strong>Galaxy S21</strong>
+                            <ol>
+                                <li>Type: Li-Ion 4000 mAh, non-removable</li>
+                                <li>Fast charging 25W</li>
+                                <li>Fast Qi/PMA wireless charging 15W</li>
+                            </ol>
+                        </li>
+                    </ul>
+
+
+
+                </div>
+
+
+
+
+
+
+
+
+
+
+            </div>
+
+
+
 
 
         </section>
-        <section class="specs_phones">
-            <h2>Camera</h2>
-            <ul id="camera-specs">
-                <li id="list-google"><strong>Google Pixel 6</strong>
-                    <ol>
-                        <li>50MP Camera</li>
-                        <li>12MP Camera</li>
-                    </ol>
-                </li>
-                <li id="list-apple"><strong>iPhone 13</strong>
-                    <ol>
-                        <li>12MP Wide Camera</li>
-                        <li>12MP Ultrawide Camera</li>
-                    </ol>
-                </li>
-                <li id="list-samsung"><strong>Galaxy S21</strong>
-                    <ol>
-                        <li>12MP Wide Camera</li>
-                        <li>8MP Telephoto Camera</li>
-                        <li>12MP Ultrawide Camera</li>
-                    </ol>
-                </li>
-            </ul>
 
 
-        </section>
 
-        <section class="specs_phones">
-            <h2>Camera</h2>
-            <ul id="camera-specs">
-                <li id="list-google"><strong>Google Pixel 6</strong>
-                    <ol>
-                        <li>50MP Camera</li>
-                        <li>12MP Camera</li>
-                    </ol>
-                </li>
-                <li id="list-apple"><strong>iPhone 13</strong>
-                    <ol>
-                        <li>12MP Wide Camera</li>
-                        <li>12MP Ultrawide Camera</li>
-                    </ol>
-                </li>
-                <li id="list-samsung"><strong>Galaxy S21</strong>
-                    <ol>
-                        <li>12MP Wide Camera</li>
-                        <li>8MP Telephoto Camera</li>
-                        <li>12MP Ultrawide Camera</li>
-                    </ol>
-                </li>
-            </ul>
-
-
-        </section>
 
         <section>
             <h2>Reviews</h2>
             <div id="reviews">
                 <div id="review-1">
                     <h3>Google Pixel 6</h3>
-                    <p>The Google Pixel 6 is a great follow up to the 5. Finally a real high-end flagship from Google, that even costs a little less than some other high-end smartphones out there.</p>
-                    <p>There is a new camera in the camera bar which makes great photos partly due to Google's image software. Even though the 6 lacks a telephoto lens, it can zoom in quite far.</p>
-                    <p>The OS is very fast and updates come in quickly just like we are used to from Google phones. The phone will also be supported for a long time.</p>
-                    <p>The battery capacity is above average but it doesn't charge as fast as other phones in its price range.</p>
+                    <p>The Google Pixel 6 is a great follow up to the 5. Finally a real high-end flagship from Google,
+                        that even costs a little less than some other high-end smartphones out there.</p>
                 </div>
                 <div id="review-2">
                     <h3>Apple iPhone 13</h3>
-                    <p>The Google Pixel 6 is a great follow up to the 5. Finally a real high-end flagship from Google, that even costs a little less than some other high-end smartphones out there.</p>
-                    <p>There is a new camera in the camera bar which makes great photos partly due to Google's image software. Even though the 6 lacks a telephoto lens, it can zoom in quite far.</p>
-                    <p>The OS is very fast and updates come in quickly just like we are used to from Google phones. The phone will also be supported for a long time.</p>
-                    <p>The battery capacity is above average but it doesn't charge as fast as other phones in its price range.</p>
+                    <p>The Google Pixel 6 is a great follow up to the 5. Finally a real high-end flagship from Google,
+                        that even costs a little less than some other high-end smartphones out there.</p>
                 </div>
                 <div id="review-3">
                     <h3>Samsung Galaxy S21</h3>
-                    <p>The Google Pixel 6 is a great follow up to the 5. Finally a real high-end flagship from Google, that even costs a little less than some other high-end smartphones out there.</p>
-                    <p>There is a new camera in the camera bar which makes great photos partly due to Google's image software. Even though the 6 lacks a telephoto lens, it can zoom in quite far.</p>
-                    <p>The OS is very fast and updates come in quickly just like we are used to from Google phones. The phone will also be supported for a long time.</p>
-                    <p>The battery capacity is above average but it doesn't charge as fast as other phones in its price range.</p>
+                    <p>The Google Pixel 6 is a great follow up to the 5. Finally a real high-end flagship from Google,
+                        that even costs a little less than some other high-end smartphones out there.</p>
                 </div>
             </div>
         </section>
 
     </div>
+    <footer>
+        <div id="footer_box">
+            <div>
+                <dl>
+                    <dt>Social Media</dt>
+                    <dd><a href="https://www.facebook.com/" id="vodafone" target="_blank">
+                            Facebook</ion-icon>
+                        </a></dd>
+                    <dd><a href="https://twitter.com/" id="vodafone" target="_blank">
+                            Twitter</ion-icon>
+                        </a></dd>
+                    <dd><a href="https://www.instagram.com/" id="vodafone" target="_blank">
+                            Instagram</ion-icon>
+                        </a></dd>
+                </dl>
+            </div>
 
-</body>
-<footer>
+            <div>
+                <dl>
+                    <dt>Location</dt>
+                    <dd><iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d77986.1358564069!2d4.808910440995633!3d52.35107469656807!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c609c0d08d3977%3A0xa0c1766e58bef77e!2sVodafone%20en%20Ziggo!5e0!3m2!1sen!2snl!4v1641979730963!5m2!1sen!2snl"
+                            width="200" height="100" style="border:0;" allowfullscreen="" loading="lazy"></iframe></dd>
+                </dl>
+            </div>
 
-    <div class="footer">
-    <h3>Contact</h3>
-    <dl>
-        <dt>Website</dt>
-        <dd><a href="https://www.vodafone.nl/" id="vodafone" target="_blank">Click here to visit our other store</a>
-        </dd>
-        <dt>Location</dt>
-        <dd><iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d77986.1358564069!2d4.808910440995633!3d52.35107469656807!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c609c0d08d3977%3A0xa0c1766e58bef77e!2sVodafone%20en%20Ziggo!5e0!3m2!1sen!2snl!4v1641979730963!5m2!1sen!2snl"
-                width="200" height="100" style="border:0;" allowfullscreen="" loading="lazy"></iframe></dd>
-    </dl>
+            <div>
+                <dl>
+                    <dt>Contact</dt>
+                    <dd><a href="mailto:mobilestore@gmail.com" target="_blank">
+                        mobilestore@gmail.com</ion-icon>
+                    </a></dd>
+                    <dd><a href="mailto:mobilestore@gmail.com" target="_blank">
+                        mobilestore@gmail.com</ion-icon>
+                    </a></dd>
 
-    </div>
+                </dl>
+            </div>
 
+        </div>
+    </footer>
     
-</footer>
+</body>
+
 
 </html>
