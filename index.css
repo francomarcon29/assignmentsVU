@@ -4,10 +4,13 @@
     font-variant: normal;
 }
 
+
+
 body{
 
     background-color: rgb(220,220,220);
-
+margin: auto;
+    
 }
 
 
@@ -17,6 +20,25 @@ background-color: black;
 
 }
 
+#navbar{
+
+width: auto;
+height: 135px;
+margin-top: none;
+background-color: black;
+color: white;
+padding: 15px;
+
+}
+
+.banner {
+    background-image: url(https://media.istockphoto.com/photos/hand-holding-mobile-phone-on-colorful-yellow-banner-background-picture-id1191133276?k=20&m=1191133276&s=170667a&w=0&h=1QFLMg3dXsfePvv5ccCF4935kN0JTW0b7QA7tUCIBdA=);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 500px;
+  }
+  
 
 .container {
     margin: 50px;
@@ -27,9 +49,9 @@ background-color: black;
 
 }
 
-nav {
-    background-color: red;
-}
+
+
+
 
 #main_table {
     width: 100%;
@@ -39,29 +61,47 @@ nav {
     text-align: center;
 }
 
-#specs_phones {
+
+#test{
     width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    
     
 }
 
-#specs_phones > div {
-    width: 24.5%;
+
+#specs_info {
+    width: 100%;
     background-color: white;
     border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+   
 }
 
-#specs_phones > div > strong {
-    text-align: center;
+
+.specs_title{
+
+    margin: auto;
+    width: 10%;
+ padding: 30px;
+
+
+}
+
+
+#specs_info > #item_specs{
+
+width: 20%;
+
+padding: 30px;
+
 }
 
 
 h1 {
-    color: aqua;
-    text-align: center;
+    color: black;
+    margin-top: 0px;
+    text-align: left;
 }
 
 figcaption {
