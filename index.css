@@ -4,31 +4,22 @@
     font-variant: normal;
 }
 
-
-
-body{
-
-    background-color: rgb(220,220,220);
-margin: auto;
-    
+body {
+    background-color: rgb(220, 220, 220);
+    margin: auto;
 }
 
-
-
-footer{
-background-color: black;
-
+footer {
+    background-color: black;
 }
 
-#navbar{
-
-width: auto;
-height: 135px;
-margin-top: none;
-background-color: black;
-color: white;
-padding: 15px;
-
+#navbar {
+    width: auto;
+    height: 135px;
+    margin-top: none;
+    background-color: black;
+    color: white;
+    padding: 15px;
 }
 
 .banner {
@@ -37,21 +28,18 @@ padding: 15px;
     background-size: cover;
     background-position: center center;
     height: 500px;
-  }
-  
+}
+
+#banner-text {
+    padding: 50px;
+}
 
 .container {
     margin: 50px;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    
-
 }
-
-
-
-
 
 #main_table {
     width: 100%;
@@ -61,12 +49,9 @@ padding: 15px;
     text-align: center;
 }
 
-
-#test{
+#test {
     width: 100%;
-    
 }
-
 
 #specs_info {
     width: 100%;
@@ -75,28 +60,19 @@ padding: 15px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-   
+    margin-bottom: 10px;
 }
 
-
-.specs_title{
-
+.specs_title {
     margin: auto;
     width: 10%;
- padding: 30px;
-
-
+    padding: 30px;
 }
 
-
-#specs_info > #item_specs{
-
-width: 20%;
-
-padding: 30px;
-
+#specs_info>#item_specs {
+    width: 20%;
+    padding: 30px;
 }
-
 
 h1 {
     color: black;
@@ -106,10 +82,6 @@ h1 {
 
 figcaption {
     font-style: italic;
-}
-
-#slogan {
-    text-align: center;
 }
 
 table {
@@ -126,7 +98,11 @@ td {
     border: 1px solid black;
 }
 
-#specs_info > li > ol > li::marker {
+#submit-row>td {
+    border: none;
+}
+
+#specs_info>li>ol>li::marker {
     font-weight: bold;
 }
 
@@ -165,7 +141,8 @@ caption {
     margin-top: 10px;
 }
 
-input[type=text], input[type=number] {
+input[type=text],
+input[type=number] {
     width: 160px;
 }
 
@@ -180,14 +157,13 @@ input[type=text], input[type=number] {
     justify-content: space-between;
 }
 
-#reviews > div {
+#reviews>div {
     width: 30%;
     text-align: center;
     padding: 15px;
     background-color: white;
     border-radius: 60px;
 }
-
 
 #footer_box {
     width: 100%;
@@ -196,14 +172,11 @@ input[type=text], input[type=number] {
     justify-content: space-between;
 }
 
-#footer_box > div{
-margin: 20px;
-width: 30%;
-color: white;
-
+#footer_box>div {
+    margin: 20px;
+    width: 30%;
+    color: white;
 }
-
-
 
 @media print {
     h1 {
@@ -212,4 +185,4 @@ color: white;
     footer {
         page-break-after: always;
     }
-  }
+}
