@@ -18,9 +18,43 @@ footer {
     height: 135px;
     margin-top: none;
     background-color: black;
-    color: white;
+    
     padding: 15px;
+
 }
+
+
+#navbar-boxes{
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-right: 100px;
+
+
+}
+
+#navbar-logo{
+
+    margin: auto 0;
+    width: 10%;
+    flex-shrink: 10;
+
+
+}
+
+
+#navbar-item{
+
+    margin: auto 0;
+width: 15%;
+text-align: center;
+
+
+}
+
+
+
 
 .banner {
     background-image: url(https://media.istockphoto.com/photos/hand-holding-mobile-phone-on-colorful-yellow-banner-background-picture-id1191133276?k=20&m=1191133276&s=170667a&w=0&h=1QFLMg3dXsfePvv5ccCF4935kN0JTW0b7QA7tUCIBdA=);
