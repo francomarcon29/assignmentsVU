@@ -45,7 +45,7 @@ a:link {
     text-align: center;
 }
 
-.navbar-item>#button-nav {
+.navbar-item>.button-nav {
     background-color: #fbcc15;
     width: 100%;
     border: none;
@@ -59,12 +59,12 @@ a:link {
     padding: 15px 32px;
 }
 
-#button-nav>a {
+.button-nav>a {
     display: block;
     color: black;
 }
 
-#button-nav:hover {
+.button-nav:hover {
     box-shadow: 0 12px 16px 0 rgba(214, 198, 198, 0.24), 0 17px 50px 0 rgba(214, 198, 198, 0.24);
 }
 
@@ -140,11 +140,9 @@ pre {
     padding: 20px;
 }
 
-
-#footer_box a:active{
+#footer_box a:active {
     color: grey;
-} 
-
+}
 
 h1 {
     color: black;
