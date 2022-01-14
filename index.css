@@ -40,6 +40,24 @@ footer {
     text-align: center;
 }
 
+#navbar-item>#button-nav {
+    background-color: yellow;
+    width: 100%;
+    border: none;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+#button-nav:hover {
+    box-shadow: 0 12px 16px 0 rgba(214, 198, 198, 0.24), 0 17px 50px 0 rgba(214, 198, 198, 0.24);
+}
+
 .banner {
     background-image: url(https://media.istockphoto.com/photos/hand-holding-mobile-phone-on-colorful-yellow-banner-background-picture-id1191133276?k=20&m=1191133276&s=170667a&w=0&h=1QFLMg3dXsfePvv5ccCF4935kN0JTW0b7QA7tUCIBdA=);
     background-repeat: no-repeat;
