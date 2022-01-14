@@ -18,7 +18,7 @@ a:link {
     text-decoration: none;
 }
 
-#navbar {
+.navbar {
     width: auto;
     height: 135px;
     margin-top: 0px;
@@ -26,26 +26,26 @@ a:link {
     padding: 15px;
 }
 
-#navbar-boxes {
+.navbar-boxes {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     margin-right: 100px;
 }
 
-#navbar-logo {
+.navbar-logo {
     margin: auto 0;
     width: 10%;
     flex-shrink: 10;
 }
 
-#navbar-item {
+.navbar-item {
     margin: auto 0;
     width: 15%;
     text-align: center;
 }
 
-#navbar-item>#button-nav {
+.navbar-item>.button-nav {
     background-color: yellow;
     width: 100%;
     border: none;
@@ -58,12 +58,12 @@ a:link {
     font-weight: bold;
 }
 
-#button-nav>a {
+.button-nav>a {
     display: block;
     padding: 15px 32px;
 }
 
-#button-nav:hover {
+.button-nav:hover {
     box-shadow: 0 12px 16px 0 rgba(214, 198, 198, 0.24), 0 17px 50px 0 rgba(214, 198, 198, 0.24);
 }
 
@@ -75,7 +75,7 @@ a:link {
     height: 500px;
 }
 
-#banner-text {
+.banner-text {
     padding: 50px;
 }
 
@@ -86,7 +86,7 @@ a:link {
     flex-direction: row;
 }
 
-#main_table {
+.main_table {
     width: 100%;
 }
 
@@ -94,18 +94,18 @@ pre {
     font: bold 1em "Courier New", monospace;
 }
 
-#models {
+.models {
     text-align: center;
     margin: 0 auto;
     background: white;
     border-radius: 10px;
 }
 
-#test {
+.test {
     width: 100%;
 }
 
-#specs_info {
+.specs_info {
     width: 100%;
     background-color: white;
     border-radius: 10px;
@@ -113,6 +113,11 @@ pre {
     flex-wrap: wrap;
     justify-content: flex-start;
     margin-bottom: 10px;
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
 }
 
 .specs_title {
@@ -123,7 +128,7 @@ pre {
     flex-shrink: 10;
 }
 
-#specs_info>#item_specs {
+.specs_info>.item_specs {
     width: 20%;
     padding: 20px;
 }
@@ -152,36 +157,36 @@ td {
     border: 1px solid black;
 }
 
-#submit-row>td {
+.submit-row>td {
     border: none;
 }
 
-#specs_info>li>ol>li::marker {
+.specs_info>li>ol>li::marker {
     font-weight: bold;
 }
 
-#specs_info li {
+.specs_info li {
     list-style-position: outside;
     margin-top: 5px;
 }
 
-#list-google {
+.list-google {
     list-style-image: url('https://i.imgur.com/6CFzMTs.png');
 }
 
-#list-apple {
+.list-apple {
     list-style-image: url('https://i.imgur.com/wPJ2ttr.png');
 }
 
-#list-samsung {
+.list-samsung {
     list-style-image: url('https://i.imgur.com/we3Oyvs.png');
 }
 
-#camera-specs ol {
+.camera-specs ol {
     list-style: decimal;
 }
 
-#item_specs>ul>li>ol {
+.item_specs>ul>li>ol {
     list-style-image: none;
     list-style-type: decimal;
 }
@@ -197,12 +202,12 @@ caption {
     margin-bottom: 5px;
 }
 
-#model-submit {
+.model-submit {
     margin: 5px 0;
     padding: 5px;
 }
 
-#email {
+.email {
     text-transform: lowercase;
 }
 
@@ -216,7 +221,7 @@ input[type=number]:focus {
     background: lightblue;
 }
 
-#reviews {
+.reviews {
     columns: 2;
     /* ask TA what this does */
     orphans: 2;
@@ -227,7 +232,7 @@ input[type=number]:focus {
     justify-content: space-between;
 }
 
-#reviews>div {
+.reviews>div {
     width: 30%;
     text-align: center;
     padding: 15px;
@@ -235,7 +240,7 @@ input[type=number]:focus {
     border-radius: 60px;
 }
 
-#review>p {
+.review>p {
     text-align: start;
     text-indent: 1em;
 }
@@ -244,28 +249,28 @@ em {
     text-decoration: underline;
 }
 
-#team-figure {
+.team-figure {
     margin: 0px;
     margin-right: 20px;
     width: 50%;
 }
 
-#team-figure>img {
+.team-figure>img {
     height: 200px;
 }
 
-#team {
+.team {
     display: flex;
 }
 
-#footer_box {
+.footer_box {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
 
-#footer_box>div {
+.footer_box>div {
     margin: 20px;
     width: 30%;
     color: white;
@@ -276,7 +281,7 @@ em {
     vertical-align: middle;
 }
 
-#maps {
+.maps {
     width: 200px;
     height: 100px;
     border: 0;
