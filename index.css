@@ -13,6 +13,12 @@ footer {
     background-color: black;
 }
 
+a:visited,
+a:link {
+    color: white;
+    text-decoration: none;
+}
+
 #navbar {
     width: auto;
     height: 135px;
@@ -45,13 +51,17 @@ footer {
     width: 100%;
     border: none;
     color: black;
-    padding: 15px 32px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
     border-radius: 10px;
     font-weight: bold;
+}
+
+#button-nav>a {
+    display: block;
+    padding: 15px 32px;
 }
 
 #button-nav:hover {
@@ -200,6 +210,11 @@ caption {
 input[type=text],
 input[type=number] {
     width: 160px;
+}
+
+input[type=text]:focus,
+input[type=number]:focus {
+    background: lightblue;
 }
 
 #reviews {
