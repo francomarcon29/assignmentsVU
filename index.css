@@ -47,6 +47,9 @@ footer {
 
 #models {
     text-align: center;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 10px;
 }
 
 #test {
@@ -59,14 +62,16 @@ footer {
     border-radius: 10px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: flex-start;
     margin-bottom: 10px;
 }
 
 .specs_title {
-    margin: auto;
+    margin: auto 0;
+    text-align: center;
     width: 10%;
     padding: 30px;
+    flex-shrink: 10;
 }
 
 #specs_info>#item_specs {
