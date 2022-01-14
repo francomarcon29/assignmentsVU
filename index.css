@@ -140,6 +140,12 @@ pre {
     padding: 20px;
 }
 
+
+#footer_box a:active{
+    color: grey;
+} 
+
+
 h1 {
     color: black;
     margin-top: 0px;
