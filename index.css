@@ -1,6 +1,5 @@
 * :not(pre) {
     font-family: 'Poppins', sans-serif;
-    font-size: normal;
     font-variant: normal;
 }
 
@@ -22,7 +21,7 @@ a:link {
 #navbar {
     width: auto;
     height: 135px;
-    margin-top: none;
+    margin-top: 0px;
     background-color: black;
     padding: 15px;
 }
@@ -92,7 +91,7 @@ a:link {
 }
 
 pre {
-    font: monospace;
+    font: bold 1em "Courier New", monospace;
 }
 
 #models {
