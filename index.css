@@ -48,7 +48,7 @@ footer {
 #models {
     text-align: center;
     margin: 0 auto;
-    background-color: white;
+    background: white;
     border-radius: 10px;
 }
 
@@ -93,8 +93,8 @@ table {
     caption-side: top;
     border-color: black;
     border-style: solid;
-    border-collapse: separate;
-    border-spacing: 1px;
+    border-collapse: collapse;
+    border-spacing: 0px;
     border-width: 1px;
 }
 
@@ -112,7 +112,7 @@ td {
 }
 
 #specs_info li {
-    list-style-position: inside;
+    list-style-position: outside;
     margin-top: 5px;
 }
 
@@ -132,6 +132,11 @@ td {
     list-style: decimal;
 }
 
+#item_specs>ul>li>ol {
+    list-style-image: none;
+    list-style-type: decimal;
+}
+
 #s21-img {
     margin-top: 5px;
     margin-left: 6px;
@@ -143,7 +148,12 @@ caption {
 }
 
 #model-submit {
-    margin-top: 10px;
+    margin: 5px 0;
+    padding: 5px;
+}
+
+#email {
+    text-transform: lowercase;
 }
 
 input[type=text],
@@ -168,6 +178,15 @@ input[type=number] {
     padding: 15px;
     background-color: white;
     border-radius: 60px;
+}
+
+#review>p {
+    text-align: start;
+    text-indent: 1em;
+}
+
+em {
+    text-decoration: underline;
 }
 
 #team-figure {
@@ -195,6 +214,16 @@ input[type=number] {
     margin: 20px;
     width: 30%;
     color: white;
+}
+
+.phone-img {
+    width: 140px;
+}
+
+#maps {
+    width: 200px;
+    height: 100px;
+    border: 0;
 }
 
 @media print {
