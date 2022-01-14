@@ -179,6 +179,7 @@ td {
 
 .submit-row>td {
     border: none;
+
 }
 
 .specs_info>li>ol>li::marker {
@@ -271,12 +272,16 @@ em {
 
 .team-figure {
     margin: 0px;
-    margin-right: 20px;
+    margin-right: 50px;
+    margin-left: 50px;
     width: 50%;
+    text-align: center;
+
 }
 
 .team-figure>img {
     height: 200px;
+    border-radius: 100px;
 }
 
 .team {
