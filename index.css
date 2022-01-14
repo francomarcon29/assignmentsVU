@@ -47,7 +47,7 @@ a:link {
 }
 
 #navbar-item>#button-nav {
-    background-color: yellow;
+    background-color: #fbcc15;
     width: 100%;
     border: none;
     color: black;
@@ -62,6 +62,7 @@ a:link {
 #button-nav>a {
     display: block;
     padding: 15px 32px;
+    color: black;
 }
 
 #button-nav:hover {
@@ -89,6 +90,14 @@ a:link {
 
 #main_table {
     width: 100%;
+}
+
+#slogan{
+
+
+text-align: left;
+font-weight: bold;
+font-size: 18px;
 }
 
 pre {
@@ -133,6 +142,15 @@ h1 {
     color: black;
     margin-top: 0px;
     text-align: left;
+    font-size: 70px;
+}
+
+h2{
+    font-size: 35px;
+}
+
+h3{
+    font-size: 22px;
 }
 
 figcaption {
