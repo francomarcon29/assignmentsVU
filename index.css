@@ -6,6 +6,7 @@
 body {
     background-color: rgb(220, 220, 220);
     margin: auto;
+    overflow-x: hidden;
 }
 
 footer {
@@ -19,17 +20,16 @@ a:link {
 }
 
 .navbar {
-    width: auto;
-    height: 135px;
+    width: 100%;
+    height: 100%;
     margin-top: 0px;
     background-color: black;
-    padding: 15px;
 }
 
 .navbar-boxes {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: flex-start;
     margin-right: 100px;
 }
 
@@ -37,12 +37,14 @@ a:link {
     margin: auto 0;
     width: 10%;
     flex-shrink: 10;
+    margin-right: 100px;
 }
 
 .navbar-item {
-    margin: auto 0;
-    width: 15%;
+    align-self: center;
     text-align: center;
+    margin-right: 80px;
+    width: 200px;
 }
 
 .navbar-item>.button-nav {
@@ -73,7 +75,7 @@ a:link {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
-    height: 500px;
+    height: 100%;
 }
 
 .banner-text {
@@ -121,16 +123,17 @@ pre {
 }
 
 .specs_title {
-    margin: auto 0;
+    align-self: center;
     text-align: center;
     width: 10%;
     padding: 30px;
     flex-shrink: 10;
 }
 
-.specs_info>.item_specs {
+.item_specs {
     width: 20%;
     padding: 20px;
+    align-self: center;
 }
 
 #footer_box a:active {
@@ -270,7 +273,7 @@ input[type=number]:focus {
     text-align: center;
     padding: 15px;
     background-color: white;
-    border-radius: 60px;
+    border-radius: 10px;
 }
 
 .review>p {
@@ -285,10 +288,8 @@ em {
 .team-figure {
     margin: 0px;
     margin-right: 50px;
-    margin-left: 50px;
-    width: 50%;
+    width: 200px;
     text-align: center;
-
 }
 
 .team-figure>img {
@@ -298,6 +299,7 @@ em {
 
 .team {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .footer_box {
@@ -332,4 +334,105 @@ em {
     .banner {
         page-break-after: always;
     }
+}
+
+@media only screen and (max-width: 1150px) {
+    .container {
+        margin: 20px;
+    }
+
+    .logo {
+        width: 60px;
+        height: 60px;
+    }
+
+    .navbar-logo {
+        margin-left: -30px;
+        width: 100%;
+    }
+
+    .navbar {
+        height: 100%;
+    }
+
+    .navbar-boxes {
+        flex-direction: column;
+        margin: 0 auto;
+        width: 100vw;
+    }
+
+    .navbar-item {
+        width: calc(100% - 50px);
+    }
+
+    .navbar-item > .button-nav {
+        padding: 10px 0px;
+        margin-bottom: 20px;
+    }
+
+    .banner-text {
+        padding: 20px;
+    }
+
+    pre {
+        font: bold 8px "Courier New", monospace;
+    }
+
+    .models-wrapper {
+        width: 100%;
+        overflow: scroll;
+    }
+    
+    .phone-img {
+        width: 80px;
+    }
+
+    #s21-img {
+        margin-top: 5px;
+        margin-left: 6px;
+        margin-right: 20px;
+        float: unset;
+    }
+
+    .models input[type="text"], .models input[type="number"] {
+        width: 100px;
+    }
+
+    .models tr:last-child>td {
+        padding: 2px;
+    }
+
+    .specs_title {
+        width: 100%;
+        padding: 5px;
+    }
+
+    .item_specs {
+        width: 100%;
+        padding: 5px 20px;
+    }
+
+    .specs_info {
+        margin-bottom: 20px;
+    }
+
+    .reviews > div {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .team-figure {
+        width: 200px;
+        margin-bottom: 20px;
+    }
+
+    .footer-item {
+        width: 100%;
+    }
+
+    .footer_box > div {
+        width: 100%;
+    }
+
+    /* TODO: make table larger on tablet */
 }

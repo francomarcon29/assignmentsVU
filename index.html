@@ -14,125 +14,105 @@
 
 <body>
     <nav class="navbar">
-
         <div class="navbar-boxes">
-
             <div class="navbar-logo">
-
                 <figure>
-
                     <img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/a/ab/Android_O_Preview_Logo.png" alt="logo">
                 </figure>
-
             </div>
-
             <div class="navbar-item">
                 <a class="button button-nav" href="#main_table">Models</a>
             </div>
-
             <div class="navbar-item">
-
                 <a class="button button-nav" href="#test">Specifications</a>
-
             </div>
-
             <div class="navbar-item">
-
                 <a class="button button-nav" href="#review_section">Reviews</a>
-
             </div>
-
         </div>
-
-
     </nav>
 
-    <!-- Banner -->
     <div class="banner">
         <div class="banner-text">
             <h1>
                 Mobile Phone Store
             </h1>
             <p class="slogan">
-
-                Are you looking for a mobile phone, but you want to see it in real life first? <br> Visit one of our stores. You can see what stores allow you to test the <em>smartphones</em> below.<br> Our experts are waiting for you with their advice.
-
+                Are you looking for a mobile phone, but you want to see it in real life first?<br>
+                Visit one of our stores. You can see what stores allow you to test the <em>smartphones</em> below.<br>
+                Our experts are waiting for you with their advice.
             </p>
-            <pre>                 _     _ _      
+            <pre>
+                 _     _ _      
                 | |   (_) |     
  _ __ ___   ___ | |__  _| | ___ 
 | '_ ` _ \ / _ \| '_ \| | |/ _ \
 | | | | | | (_) | |_) | | |  __/
 |_| |_| |_|\___/|_.__/|_|_|\___|
-                                </pre>
+            </pre>
         </div>
     </div>
-    <!-- /Banner -->
 
     <div class="container">
         <section id="main_table">
             <h2>Models we offer</h2>
             <p>These are all the phone models that our store has to offer, pick the right one!</p>
             <form action="https://wt.ops.labs.vu.nl/api22/d1556c44" method="post" id="model-form"></form>
-            <table class="models">
-                <caption>Smartphones</caption>
-                <thead>
-                    <tr>
-                        <th>Brand</th>
-                        <th>Model</th>
-                        <th><abbr title="Operating System">OS</abbr></th>
-                        <th>Screensize</th>
-                        <th>Image</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Google</td>
-                        <td>Pixel 6</td>
-                        <td>Android</td>
-                        <td>6</td>
-                        <td><img alt="Google Pixel 6" src="https://i.imgur.com/mFlscoH.png" class="phone-img"></td>
-                    </tr>
-                    <tr>
-                        <td>Apple</td>
-                        <td>iPhone 13</td>
-                        <td>iOS</td>
-                        <td>6</td>
-                        <td><img alt="Apple iPhone 13" src="https://i.imgur.com/s23UJbf.png" class="phone-img"></td>
-                    </tr>
-                    <tr>
-                        <td>Samsung</td>
-                        <td>Galaxy S21</td>
-                        <td>Android</td>
-                        <td>6</td>
-                        <td><img alt="Samsung Galaxy S21" src="https://media.s-bol.com/qZLzw6x7rA1D/550x747.jpg" class="phone-img" id="s21-img"></td>
-                    </tr>
+            <div class="models-wrapper">
+                <table class="models">
+                    <caption>Smartphones</caption>
+                    <thead>
+                        <tr>
+                            <th>Brand</th>
+                            <th>Model</th>
+                            <th><abbr title="Operating System">OS</abbr></th>
+                            <th>Screensize</th>
+                            <th>Image</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Google</td>
+                            <td>Pixel 6</td>
+                            <td>Android</td>
+                            <td>6</td>
+                            <td><img alt="Google Pixel 6" src="https://i.imgur.com/mFlscoH.png" class="phone-img"></td>
+                        </tr>
+                        <tr>
+                            <td>Apple</td>
+                            <td>iPhone 13</td>
+                            <td>iOS</td>
+                            <td>6</td>
+                            <td><img alt="Apple iPhone 13" src="https://i.imgur.com/s23UJbf.png" class="phone-img"></td>
+                        </tr>
+                        <tr>
+                            <td>Samsung</td>
+                            <td>Galaxy S21</td>
+                            <td>Android</td>
+                            <td>6</td>
+                            <td><img alt="Samsung Galaxy S21" src="https://media.s-bol.com/qZLzw6x7rA1D/550x747.jpg" class="phone-img" id="s21-img"></td>
+                        </tr>
 
-                    <tr>
-                        <td><input form="model-form" required type="text" id="brand" name="brand" placeholder="Brand"></td>
-                        <td><input form="model-form" required type="text" id="model" name="model" placeholder="Model"></td>
-                        <td><input form="model-form" required type="text" id="os" name="os" placeholder="OS"></td>
-                        <td><input form="model-form" required type="number" id="screensize" name="screensize" placeholder="Screensize">
-                        </td>
-                        <td><input form="model-form" required type="text" id="image" name="image" placeholder="Image URI"></td>
-                    </tr>
-                </tbody>
-                <tfoot>
-                    <tr class="submit-row">
-                        <td colspan="5">
-                            <input type="submit" value="Submit a new model" form="model-form" class="model-submit" />
-                        </td>
-                    </tr>
-                </tfoot>
-            </table>
+                        <tr>
+                            <td><input form="model-form" required type="text" id="brand" name="brand" placeholder="Brand"></td>
+                            <td><input form="model-form" required type="text" id="model" name="model" placeholder="Model"></td>
+                            <td><input form="model-form" required type="text" id="os" name="os" placeholder="OS"></td>
+                            <td><input form="model-form" required type="number" id="screensize" name="screensize" placeholder="Screensize">
+                            </td>
+                            <td><input form="model-form" required type="text" id="image" name="image" placeholder="Image URI"></td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr class="submit-row">
+                            <td colspan="5">
+                                <input type="submit" value="Submit a new model" form="model-form" class="model-submit" />
+                            </td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
         </section>
-
-
-
-
-
-
-
+        
         <section id="test">
             <h2>Specifications</h2>
             <div class="specs_info">
@@ -297,7 +277,6 @@
                     </ul>
                 </div>
             </div>
-
         </section>
 
         <section id="review_section">
@@ -381,7 +360,7 @@
                     <dd>
                         <a class="email" href="mailto:mobilestore@gmail.com" target="_blank">
                             <ion-icon name="mail-outline"></ion-icon> mobilestore@gmail.com
-                           </a>
+                        </a>
                     </dd>
                     <dd>
                         <a class="phone" href="tel:+310852007171" target="_self">
