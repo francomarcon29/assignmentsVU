@@ -101,13 +101,6 @@ pre {
     font: bold 1em "Courier New", monospace;
 }
 
-.models {
-    text-align: center;
-    margin: 0 auto;
-    background: white;
-    border-radius: 10px;
-}
-
 #test {
     width: 100%;
 }
@@ -163,18 +156,37 @@ figcaption {
     font-style: italic;
 }
 
-table {
+.models {
+    text-align: center;
+    margin: 0 auto;
+    background: white;
     caption-side: top;
+    border-collapse: collapse;
     border-color: black;
     border-style: solid;
-    border-collapse: collapse;
-    border-spacing: 0px;
     border-width: 1px;
+    border-spacing: 0px;
 }
 
-td {
+.models td {
     padding: 5px;
     border: 1px solid black;
+}
+
+.models tr>td:first-child {
+    border-left: none;
+}
+
+.models tr>td:last-child {
+    border-right: none;
+}
+
+.models tr:last-child>td {
+    padding: 10px;
+}
+
+.models th {
+    padding: 10px;
 }
 
 .submit-row>td {
@@ -308,10 +320,11 @@ em {
 }
 
 @media print {
-    h1 {
+    section {
         page-break-before: always;
     }
-    footer {
+    footer,
+    .banner {
         page-break-after: always;
     }
 }
