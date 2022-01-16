@@ -361,6 +361,8 @@ em {
         width: 100vw;
     }
 
+
+
     .navbar-item {
         width: calc(100% - 50px);
     }
@@ -369,6 +371,7 @@ em {
         padding: 10px 0px;
         margin-bottom: 20px;
     }
+
 
     .banner-text {
         padding: 20px;

@@ -379,11 +379,14 @@
 
 <!-- 
     Browser report:
-    For testing, we used Firefox and Microsoft Edge (the new chromium based version)
+    For testing, we used Firefox, Microsoft Edge (the new chromium based version), and Google Chrome.
     Firefox was sharper compared to Edge. We think Edge uses more anti-aliasing than Firefox, making images and text smoother but less sharp.
     Text in dt tags seemed a little bit fatter on Edge.
     Firefox kept the reviews on one page when printing while Edge split the review text across two pages. This resulted in Edge printing 5 pages while Firefox printed 4.
-    Firefox and Edge showed no differences when viewing the page on a mobile device
+    Firefox and Edge showed no differences when viewing the page on a mobile device.
+    On the other hand, viewing the page on Google Chrome was much different than the other 2 browsers. 
+    We observed that when Chrome renders the website it does not adjust the sections to the exact width of the screen like the other browsers did, neither on mobile, tablet nor laptop. We think the solution could be adding more media queries to have a more specific responsiveness depending on the different screen sizes.
+    To conclude, Chrome printed 5 pages as well as Edge.
  -->
 
 </html>
