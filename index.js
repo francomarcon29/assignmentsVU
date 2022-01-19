@@ -33,7 +33,6 @@ $(function() {
     $.ajax({
         url: "https://wt.ops.labs.vu.nl/api22/d1556c44", 
         method: "GET",
-        
      })
      .done(function(data) {
          data.forEach(model => {
@@ -42,16 +41,21 @@ $(function() {
      });
 });
 
-// Prevent following form link
+// Submit new model, get it and prevent following form link
 $('#model-form').submit(function(e) {
+    const tableBody = $('.models').find('tbody');
     e.preventDefault();
     $.ajax({
         url: 'https://wt.ops.labs.vu.nl/api22/d1556c44',
         type: 'post',
         data: $('#model-form').serialize(),
         success: function(data) {
-            const json = $.parseJSON(data);
-            console.dir(json);
+            $.ajax({
+                url: data.URI,
+                method: "GET",
+            }).done(function(data) {
+                tableBody.append(`<tr class="bodyRows"><td>${data.brand}</td><td>${data.model}</td><td>${data.os}</td><td>${data.screensize}</td><td><img alt="${data.brand} ${data.model}" src="${data.image}" class="phone-img"></td></tr>`)
+            })
         }
     });
 });
