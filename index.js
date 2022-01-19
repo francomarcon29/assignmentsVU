@@ -17,7 +17,7 @@ function comparer(index) {
 function getCellValue(row, index){ return $(row).children('td').eq(index).text(); }
 
 // Fetch model table data on page load
-$(function() {
+function getModels() {
     const tableBody = $('.models').find('tbody');
 
     $.ajax({
@@ -29,7 +29,9 @@ $(function() {
              tableBody.append(`<tr class="bodyRows"><td>${model.brand}</td><td>${model.model}</td><td>${model.os}</td><td>${model.screensize}</td><td><img alt="${model.brand} ${model.model}" src="${model.image}" class="phone-img"></td></tr>`);
          });
      });
-});
+}
+
+$(getModels);
 
 // Submit new model, get it and prevent following form link
 $('#model-form').submit(function(e) {
@@ -48,4 +50,17 @@ $('#model-form').submit(function(e) {
             });
         }
     });
+});
+
+$('#db-reset').submit(function(e) {
+    const tableBody = $('.models').find('tbody');
+    e.preventDefault();
+    $.ajax({
+        url: 'https://wt.ops.labs.vu.nl/api22/d1556c44/reset',
+        type: 'get',
+    }).done(function() {
+        tableBody.empty();
+
+        getModels();
+    })
 });
