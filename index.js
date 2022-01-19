@@ -12,6 +12,45 @@ function comparer(index) {
     }
 }
 function getCellValue(row, index){ return $(row).children('td').eq(index).text() }
+
+// {
+//     "id": 22926,
+//     "brand": "Apple",
+//     "model": "iPhone X",
+//     "os": "iOS",
+//     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/IPhone_X_vector.svg/440px-IPhone_X_vector.svg.png",
+//     "screensize": 5
+// }
+
+$(function() {
+    const tableBody = $('.models').find('tbody');
+
+    $.ajax({
+        url: "https://wt.ops.labs.vu.nl/api22/d1556c44", 
+        method: "GET",
+        
+     })
+     .done(function(data) {
+         data.forEach(model => {
+             tableBody.append(`<tr class="bodyRows"><td>${model.brand}</td><td>${model.model}</td><td>${model.os}</td><td>${model.screensize}</td><td><img alt="${model.brand} ${model.model}" src="${model.image}" class="phone-img"></td></tr>`)
+         });
+     });
+});
+
+// Prevent following form link
+$('#model-form').submit(function(e) {
+    e.preventDefault();
+    $.ajax({
+        url: 'https://wt.ops.labs.vu.nl/api22/d1556c44',
+        type: 'post',
+        data: $('#model-form').serialize(),
+        success: function(data) {
+            const json = $.parseJSON(data);
+            console.dir(json);
+        }
+    });
+});
+
 /*
 
 var mylist = $('#myUL');
