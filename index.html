@@ -17,7 +17,8 @@
         <div class="navbar-boxes">
             <div class="navbar-logo">
                 <figure>
-                    <img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/a/ab/Android_O_Preview_Logo.png" alt="logo">
+                    <img class="logo"
+                        src="https://upload.wikimedia.org/wikipedia/commons/a/ab/Android_O_Preview_Logo.png" alt="logo">
                 </figure>
             </div>
             <div class="navbar-item">
@@ -62,57 +63,67 @@
                 <table class="models">
                     <caption>Smartphones</caption>
                     <thead>
-                        <tr>
-                            <th>Brand</th>
-                            <th>Model</th>
-                            <th><abbr title="Operating System">OS</abbr></th>
-                            <th>Screensize</th>
-                            <th>Image</th>
+                        <tr class="bodyRows">
+                            <th><button>Brand</button></th>
+                            <th><button>Model</button</th>
+                            <th><abbr title="Operating System"><button>OS</button></abbr></th>
+                            <th><button>Screensize</button></th>
+                            <th><button>Image</button></th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
+                        <tr class="bodyRows">
                             <td>Google</td>
                             <td>Pixel 6</td>
                             <td>Android</td>
                             <td>6</td>
                             <td><img alt="Google Pixel 6" src="https://i.imgur.com/mFlscoH.png" class="phone-img"></td>
                         </tr>
-                        <tr>
+                        <tr class="bodyRows">
                             <td>Apple</td>
                             <td>iPhone 13</td>
                             <td>iOS</td>
                             <td>6</td>
                             <td><img alt="Apple iPhone 13" src="https://i.imgur.com/s23UJbf.png" class="phone-img"></td>
                         </tr>
-                        <tr>
+                        <tr class="bodyRows">
                             <td>Samsung</td>
                             <td>Galaxy S21</td>
                             <td>Android</td>
                             <td>6</td>
-                            <td><img alt="Samsung Galaxy S21" src="https://media.s-bol.com/qZLzw6x7rA1D/550x747.jpg" class="phone-img" id="s21-img"></td>
+                            <td><img alt="Samsung Galaxy S21" src="https://media.s-bol.com/qZLzw6x7rA1D/550x747.jpg"
+                                    class="phone-img" id="s21-img"></td>
                         </tr>
 
-                        <tr>
-                            <td><input form="model-form" required type="text" id="brand" name="brand" placeholder="Brand"></td>
-                            <td><input form="model-form" required type="text" id="model" name="model" placeholder="Model"></td>
-                            <td><input form="model-form" required type="text" id="os" name="os" placeholder="OS"></td>
-                            <td><input form="model-form" required type="number" id="screensize" name="screensize" placeholder="Screensize">
-                            </td>
-                            <td><input form="model-form" required type="text" id="image" name="image" placeholder="Image URI"></td>
-                        </tr>
+                        
                     </tbody>
                     <tfoot>
+                        <tr>
+                            <td><input form="model-form" required type="text" id="brand" name="brand"
+                                    placeholder="Brand"></td>
+                            <td><input form="model-form" required type="text" id="model" name="model"
+                                    placeholder="Model"></td>
+                            <td><input form="model-form" required type="text" id="os" name="os" placeholder="OS"></td>
+                            <td><input form="model-form" required type="number" id="screensize" name="screensize"
+                                    placeholder="Screensize">
+                            </td>
+                            <td><input form="model-form" required type="text" id="image" name="image"
+                                    placeholder="Image URI"></td>
+                        </tr>
                         <tr class="submit-row">
                             <td colspan="5">
-                                <input type="submit" value="Submit a new model" form="model-form" class="model-submit" />
+                                <input type="submit" value="Submit a new model" form="model-form"
+                                    class="model-submit" />
                             </td>
                         </tr>
                     </tfoot>
                 </table>
             </div>
         </section>
-        
+
+
+
+
         <section id="test">
             <h2>Specifications</h2>
             <div class="specs_info">
@@ -284,18 +295,24 @@
             <div class="reviews">
                 <div class="review">
                     <h3>Google Pixel 6</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ligula urna, tincidunt quis luctus vulputate, euismod vitae ex. </p>
-                    <p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ligula urna, tincidunt quis
+                        luctus vulputate, euismod vitae ex. </p>
+                    <p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Lorem
+                        ipsum dolor sit amet, consectetur adipiscing elit.</p>
                 </div>
                 <div class="review">
                     <h3>Apple iPhone 13</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ligula urna, tincidunt quis luctus vulputate, euismod vitae ex. </p>
-                    <p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ligula urna, tincidunt quis
+                        luctus vulputate, euismod vitae ex. </p>
+                    <p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Lorem
+                        ipsum dolor sit amet, consectetur adipiscing elit.</p>
                 </div>
                 <div class="review">
                     <h3>Samsung Galaxy S21</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ligula urna, tincidunt quis luctus vulputate, euismod vitae ex. </p>
-                    <p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ligula urna, tincidunt quis
+                        luctus vulputate, euismod vitae ex. </p>
+                    <p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Lorem
+                        ipsum dolor sit amet, consectetur adipiscing elit.</p>
                 </div>
             </div>
         </section>
@@ -349,7 +366,8 @@
             <div>
                 <dl>
                     <dt>Location</dt>
-                    <dd><iframe class="maps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d77986.1358564069!2d4.808910440995633!3d52.35107469656807!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c609c0d08d3977%3A0xa0c1766e58bef77e!2sVodafone%20en%20Ziggo!5e0!3m2!1sen!2snl!4v1641979730963!5m2!1sen!2snl"
+                    <dd><iframe class="maps"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d77986.1358564069!2d4.808910440995633!3d52.35107469656807!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c609c0d08d3977%3A0xa0c1766e58bef77e!2sVodafone%20en%20Ziggo!5e0!3m2!1sen!2snl!4v1641979730963!5m2!1sen!2snl"
                             allowfullscreen="" loading="lazy"></iframe></dd>
                 </dl>
             </div>
@@ -373,8 +391,15 @@
     </footer>
 
 
+
+
+
+<!----Scripts-->
+    <script  src="https://code.jquery.com/jquery-3.5.1.min.js"  integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="  crossorigin="anonymous"></script>
+    <script src="./index.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
 </body>
 
 <!-- 
@@ -388,5 +413,7 @@
     We observed that when Chrome renders the website it does not adjust the sections to the exact width of the screen like the other browsers did, neither on mobile, tablet nor laptop. We think the solution could be adding more media queries to have a more specific responsiveness depending on the different screen sizes.
     To conclude, Chrome printed 5 pages as well as Edge.
  -->
+
+
 
 </html>
