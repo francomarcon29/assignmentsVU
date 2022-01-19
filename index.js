@@ -1,8 +1,3 @@
-
-
-
-
-
 $('th').click(function(){
     var table = $(this).parents('.models').eq(0)
     var rows = table.find('.bodyRows:gt(0)').toArray().sort(comparer($(this).index()))
