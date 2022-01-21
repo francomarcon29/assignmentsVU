@@ -26,7 +26,15 @@ function getModels() {
      })
      .done(function(data) {
          data.forEach(model => {
-             tableBody.append(`<tr class="bodyRows"><td>${model.brand}</td><td>${model.model}</td><td>${model.os}</td><td>${model.screensize}</td><td><img alt="${model.brand} ${model.model}" src="${model.image}" class="phone-img"></td></tr>`);
+             tableBody.append(`
+             <tr class="bodyRows">
+                <td>${model.brand}</td>
+                <td>${model.model}</td>
+                <td>${model.os}</td>
+                <td>${model.screensize}</td>
+                <td><img alt="${model.brand} ${model.model}" src="${model.image}" class="phone-img"></td>
+             </tr>
+             `);
          });
      });
 }
@@ -46,7 +54,15 @@ $('#model-form').submit(function(e) {
                 url: data.URI,
                 method: "GET",
             }).done(function(data) {
-                tableBody.append(`<tr class="bodyRows"><td>${data.brand}</td><td>${data.model}</td><td>${data.os}</td><td>${data.screensize}</td><td><img alt="${data.brand} ${data.model}" src="${data.image}" class="phone-img"></td></tr>`);
+                tableBody.append(`
+                <tr class="bodyRows">
+                    <td>${data.brand}</td>
+                    <td>${data.model}</td>
+                    <td>${data.os}</td>
+                    <td>${data.screensize}</td>
+                    <td><img alt="${data.brand} ${data.model}" src="${data.image}" class="phone-img"></td>
+                </tr>
+                `);
             });
         }
     });
