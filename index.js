@@ -47,6 +47,8 @@ $('#model-form').submit(function(e) {
                 method: "GET",
             }).done(function(data) {
                 tableBody.append(`<tr class="bodyRows"><td>${data.brand}</td><td>${data.model}</td><td>${data.os}</td><td>${data.screensize}</td><td><img alt="${data.brand} ${data.model}" src="${data.image}" class="phone-img"></td></tr>`);
+            }).done(function(){
+                $('.inputForm').val('');
             });
         }
     });
