@@ -1,4 +1,4 @@
-// Sorting
+// Alphabetic sorting, source: https://stackoverflow.com/questions/3160277/jquery-table-sort
 $('th').click(function() {
     const table = $(this).parents('.models').eq(0);
     const rows = table.find('.bodyRows:gt(0)').toArray().sort(comparer($(this).index()));
