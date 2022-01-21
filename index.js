@@ -3,36 +3,44 @@ $('th').click(function() {
     const table = $(this).parents('.models').eq(0);
     const rows = table.find('.bodyRows:gt(0)').toArray().sort(comparer($(this).index()));
     this.asc = !this.asc;
-    if (!this.asc) { rows = rows.reverse(); }
-    for (let i = 0; i < rows.length; i++) { table.append(rows[i]); }
+
+    if (!this.asc) {
+        rows.reverse();
+    }
+
+    for (let i = 0; i < rows.length; i++) {
+        table.append(rows[i]);
+    }
 });
 
 function comparer(index) {
     return function(a, b) {
         const valA = getCellValue(a, index), valB = getCellValue(b, index);
+
         return $.isNumeric(valA) && $.isNumeric(valB) ? valA - valB : valA.toString().localeCompare(valB);
     }
 }
 
-function getCellValue(row, index){ return $(row).children('td').eq(index).text(); }
+function getCellValue(row, index) {
+    return $(row).children('td').eq(index).text();
+}
 
 // Fetch model table data on page load
 function getModels() {
     const tableBody = $('.models').find('tbody');
 
     $.ajax({
-        url: "https://wt.ops.labs.vu.nl/api22/d1556c44", 
-        method: "GET",
-     })
-     .done(function(data) {
+        url: 'https://wt.ops.labs.vu.nl/api22/d1556c44', 
+        method: 'GET',
+     }).done(function(data) {
          data.forEach(model => {
              tableBody.append(`
-                <tr class="bodyRows">
+                <tr class='bodyRows'>
                     <td>${model.brand}</td>
                     <td>${model.model}</td>
                     <td>${model.os}</td>
                     <td>${model.screensize}</td>
-                    <td><img alt="${model.brand} ${model.model}" src="${model.image}" class="phone-img"></td>
+                    <td><img alt='${model.brand} ${model.model}' src='${model.image}' class='phone-img'></td>
                 </tr>
              `);
          });
@@ -47,24 +55,23 @@ $('#model-form').submit(function(e) {
     e.preventDefault();
     $.ajax({
         url: 'https://wt.ops.labs.vu.nl/api22/d1556c44',
-        type: 'post',
+        method: 'POST',
         data: $('#model-form').serialize(),
-        success: function(data) {
-            $.ajax({
-                url: data.URI,
-                method: "GET",
-            }).done(function(data) {
-                tableBody.append(`
-                    <tr class="bodyRows">
-                        <td>${data.brand}</td>
-                        <td>${data.model}</td>
-                        <td>${data.os}</td>
-                        <td>${data.screensize}</td>
-                        <td><img alt="${data.brand} ${data.model}" src="${data.image}" class="phone-img"></td>
-                    </tr>
-                `);
-            });
-        }
+    }).done(function(data) {
+        $.ajax({
+            url: data.URI,
+            method: 'GET',
+        }).done(function(data) {
+            tableBody.append(`
+                <tr class='bodyRows'>
+                    <td>${data.brand}</td>
+                    <td>${data.model}</td>
+                    <td>${data.os}</td>
+                    <td>${data.screensize}</td>
+                    <td><img alt='${data.brand} ${data.model}' src='${data.image}' class='phone-img'></td>
+                </tr>
+            `);
+        });
     });
 });
 
@@ -73,10 +80,10 @@ $('#db-reset').submit(function(e) {
     e.preventDefault();
     $.ajax({
         url: 'https://wt.ops.labs.vu.nl/api22/d1556c44/reset',
-        type: 'get',
+        method: 'GET',
     }).done(function() {
         tableBody.empty();
 
         getModels();
-    })
+    });
 });
