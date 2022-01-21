@@ -17,7 +17,7 @@ function comparer(index) {
     return function(a, b) {
         const valA = getCellValue(a, index), valB = getCellValue(b, index);
 
-        return $.isNumeric(valA) && $.isNumeric(valB) ? valA - valB : valA.toString().localeCompare(valB);
+        return valA.toString().localeCompare(valB);
     }
 }
 
