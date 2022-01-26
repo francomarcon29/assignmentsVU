@@ -1,0 +1,22 @@
+{
+  "name": "assignmentsvu",
+  "version": "1.0.0",
+  "description": "assignments_VU",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/francomarcon29/assignmentsVU.git"
+  },
+  "author": "Franco and Jari",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/francomarcon29/assignmentsVU/issues"
+  },
+  "homepage": "https://github.com/francomarcon29/assignmentsVU#readme",
+  "dependencies": {
+    "express": "^4.17.2"
+  }
+}
