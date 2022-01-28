@@ -12,7 +12,7 @@ app.use(bodyParser.json());
 
 // TODO: set the appropriate HTTP response headers and HTTP response codes here.
 
-app.get("/items", function(req, res) {
+app.get('/items', function(req, res) {
     db.all('SELECT * FROM phones', function(err, rows) {
         if (err) {
             return res.status(500).send(error);
@@ -27,7 +27,7 @@ app.post("/items", function(req, res) {
 });
 
 app.get('/db-example', function(req, res) {
-    db.all(`SELECT * FROM phones WHERE brand=?`, ['Fairphone'], function(err, rows) {
+    db.all(`SELECT * FROM phones WHERE id=?`, ['Fairphone'], function(err, rows) {
 
     	// # Return db response as JSON
     	return res.json(rows)
