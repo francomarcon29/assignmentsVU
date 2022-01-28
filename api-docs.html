@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Docs</title>
+</head>
+<body>
+    <div class='endpoint'>
+        <h1>GET /items</h1>
+        <p>Retrieve all items</p>
+        <h3>JSON response body fields</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>id</td>
+                    <td>String</td>
+                    <td>The unique id of the item retrieved</td>
+                </tr>
+                <tr>
+                    <td>brand</td>
+                    <td>String</td>
+                    <td>The brand name of the item retrieved</td>
+                </tr>
+                <tr>
+                    <td>model</td>
+                    <td>String</td>
+                    <td>The model name of the item retrieved</td>
+                </tr>
+                <tr>
+                    <td>os</td>
+                    <td>String</td>
+                    <td>The operating system of the item retrieved</td>
+                </tr>
+                <tr>
+                    <td>image</td>
+                    <td>String</td>
+                    <td>The image URL of the item retrieved</td>
+                </tr>
+                <tr>
+                    <td>screensize</td>
+                    <td>Integer</td>
+                    <td>The screen size of the item retrieved</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class='endpoint'>
+        <h1>POST /items</h1>
+        <p>Add one item</p>
+        <p>all request fields are required</p>
+        <h3>JSON request body fields</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>id</td>
+                    <td>String</td>
+                    <td>The unique id of the item to be added</td>
+                </tr>
+                <tr>
+                    <td>brand</td>
+                    <td>String</td>
+                    <td>The brand name of the item to be added</td>
+                </tr>
+                <tr>
+                    <td>model</td>
+                    <td>String</td>
+                    <td>The model name of the item to be added</td>
+                </tr>
+                <tr>
+                    <td>os</td>
+                    <td>String</td>
+                    <td>The operating system of the item to be added</td>
+                </tr>
+                <tr>
+                    <td>image</td>
+                    <td>String</td>
+                    <td>The image URL of the item to be added</td>
+                </tr>
+                <tr>
+                    <td>screensize</td>
+                    <td>Integer</td>
+                    <td>The screen size of the item to be added</td>
+                </tr>
+            </tbody>
+        </table>
+        <h3>JSON response body fields</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>id</td>
+                    <td>String</td>
+                    <td>The unique id of the item added</td>
+                </tr>
+                <tr>
+                    <td>brand</td>
+                    <td>String</td>
+                    <td>The brand name of the item added</td>
+                </tr>
+                <tr>
+                    <td>model</td>
+                    <td>String</td>
+                    <td>The model name of the item added</td>
+                </tr>
+                <tr>
+                    <td>os</td>
+                    <td>String</td>
+                    <td>The operating system of the item added</td>
+                </tr>
+                <tr>
+                    <td>image</td>
+                    <td>String</td>
+                    <td>The image URL of the item added</td>
+                </tr>
+                <tr>
+                    <td>screensize</td>
+                    <td>Integer</td>
+                    <td>The screen size of the item added</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class='endpoint'>
+        <h1>GET /items/:id</h1>
+        <p>Retrieve one item by its id</p>
+        <h3>Path parameters</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>id</td>
+                    <td>String</td>
+                    <td>The unique id of the item to be retrieved</td>
+                </tr>
+            </tbody>
+        </table>
+        <h3>JSON response body fields</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>id</td>
+                    <td>String</td>
+                    <td>The unique id of the item retrieved</td>
+                </tr>
+                <tr>
+                    <td>brand</td>
+                    <td>String</td>
+                    <td>The brand name of the item retrieved</td>
+                </tr>
+                <tr>
+                    <td>model</td>
+                    <td>String</td>
+                    <td>The model name of the item retrieved</td>
+                </tr>
+                <tr>
+                    <td>os</td>
+                    <td>String</td>
+                    <td>The operating system of the item retrieved</td>
+                </tr>
+                <tr>
+                    <td>image</td>
+                    <td>String</td>
+                    <td>The image URL of the item retrieved</td>
+                </tr>
+                <tr>
+                    <td>screensize</td>
+                    <td>Integer</td>
+                    <td>The screen size of the item retrieved</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class='endpoint'>
+        <h1>PUT /items/:id</h1>
+        <p>Update the data of an item by its id</p>
+        <h3>Path parameters</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>id</td>
+                    <td>String</td>
+                    <td>The unique id of the item to be updated</td>
+                </tr>
+            </tbody>
+        </table>
+        <h3>JSON request body fields</h3>
+        <p>all request fields are optional</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>brand</td>
+                    <td>String</td>
+                    <td>The brand name of the item to be updated</td>
+                </tr>
+                <tr>
+                    <td>model</td>
+                    <td>String</td>
+                    <td>The model name of the item to be updated</td>
+                </tr>
+                <tr>
+                    <td>os</td>
+                    <td>String</td>
+                    <td>The operating system of the item to be updated</td>
+                </tr>
+                <tr>
+                    <td>image</td>
+                    <td>String</td>
+                    <td>The image URL of the item to be updated</td>
+                </tr>
+                <tr>
+                    <td>screensize</td>
+                    <td>Integer</td>
+                    <td>The screen size of the item to be updated</td>
+                </tr>
+            </tbody>
+        </table>
+        <h3>JSON response body fields</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>id</td>
+                    <td>String</td>
+                    <td>The unique id of the item updated</td>
+                </tr>
+                <tr>
+                    <td>brand</td>
+                    <td>String</td>
+                    <td>The brand name of the item updated</td>
+                </tr>
+                <tr>
+                    <td>model</td>
+                    <td>String</td>
+                    <td>The model name of the item updated</td>
+                </tr>
+                <tr>
+                    <td>os</td>
+                    <td>String</td>
+                    <td>The operating system of the item updated</td>
+                </tr>
+                <tr>
+                    <td>image</td>
+                    <td>String</td>
+                    <td>The image URL of the item updated</td>
+                </tr>
+                <tr>
+                    <td>screensize</td>
+                    <td>Integer</td>
+                    <td>The screen size of the item updated</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class='endpoint'>
+        <h1>DELETE /items/:id</h1>
+        <p>Delete an item by its id</p>
+        <h3>Path parameters</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>id</td>
+                    <td>String</td>
+                    <td>The unique id of the item to be deleted</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
