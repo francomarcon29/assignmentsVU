@@ -10,14 +10,15 @@ const app = express();
 var bodyParser = require("body-parser");
 app.use(bodyParser.json());
 
-
+// TODO: set the appropriate HTTP response headers and HTTP response codes here.
 
 app.get("/items", function(req, res) {
     db.all('SELECT * FROM phones', function(err, rows) {
         if (err) {
-            console.log(err);
+            return res.status(500).send(error);
+        } else {
+            return res.json(rows);
         }
-        return res.json(rows);
     });
 });
 
@@ -25,15 +26,8 @@ app.post("/items", function(req, res) {
     db.all()
 });
 
-// This route responds to http://localhost:3000/db-example by selecting some data from the
-// database and return it as JSON object.
-// Please test if this works on your own device before you make any changes.
 app.get('/db-example', function(req, res) {
-    // Example SQL statement to select the name of all products from a specific brand
     db.all(`SELECT * FROM phones WHERE brand=?`, ['Fairphone'], function(err, rows) {
-	
-    	// TODO: add code that checks for errors so you know what went wrong if anything went wrong
-    	// TODO: set the appropriate HTTP response headers and HTTP response codes here.
 
     	// # Return db response as JSON
     	return res.json(rows)
