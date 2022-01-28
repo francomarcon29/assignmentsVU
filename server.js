@@ -11,15 +11,28 @@ var bodyParser = require("body-parser");
 app.use(bodyParser.json());
 
 // TODO: set the appropriate HTTP response headers and HTTP response codes here.
+// TODO: test all routes for all possible errors and send the appriopriate response codes.
 
-app.get('/items', function(req, res) {
-    db.all('SELECT * FROM phones', function(err, rows) {
-        if (err) {
-            return res.status(500).send(err);
-        } else {
-            return res.json(rows);
-        }
-    });
+app.get('/items/:id', function(req, res) {
+    const id = req.params.id;
+    
+    if (id) {
+        db.all('SELECT * FROM phones WHERE id=?', id, function(err, rows) {
+            if (err) {
+                return res.status(500).send(err);
+            } else {
+                return res.json(rows);
+            }
+        });
+    } else {
+        db.all('SELECT * FROM phones', function(err, rows) {
+            if (err) {
+                return res.status(500).send(err);
+            } else {
+                return res.json(rows);
+            }
+        });
+    }
 });
 
 app.post('/items', function(req, res) {
@@ -33,6 +46,18 @@ app.post('/items', function(req, res) {
 
     db.run(`INSERT INTO phones (brand, model, os, image, screensize) VALUES (?, ?, ?, ?, ?)`,
     [item.brand, item.model, item.os, item.image, item.screensize], function(err) {
+        if (err) {
+            return res.status(500).send(err);
+        } else {
+            return res.status(200).send();
+        }
+    });
+});
+
+app.delete('/items/:id', function(req, res) {
+    const id = req.params.id;
+
+    db.run('DELETE FROM phones WHERE id=?', id, function(err) {
         if (err) {
             return res.status(500).send(err);
         } else {
