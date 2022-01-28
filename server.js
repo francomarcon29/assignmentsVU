@@ -23,16 +23,18 @@ app.get('/items', function(req, res) {
 });
 
 app.post('/items', function(req, res) {
-    const item = {
-        brand: req.body.brand,
-        model: req.body.model,
-        os: req.body.os,
-        image: req.body.image,
-        screensize: req.body.screensize,
-      };
+    
+    
+    const _body = req.body
+    _body.brand = req.body.brand,
+    _body.model = req.body.model,
+    _body.os = req.body.os,
+    _body.image = req.body.image,
+    _body.screensize = req.body.screensize
+      
 
     db.run(`INSERT INTO phones (brand, model, os, image, screensize) VALUES (?, ?, ?, ?, ?)`,
-    [item.brand, item.model, item.os, item.image, item.screensize], function(err) {
+    [_body], function(err) {
       if (err) {
             return res.status(500).send(err);
         } else {
