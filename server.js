@@ -12,13 +12,17 @@ app.use(bodyParser.json());
 
 
 
-app.get("/hello", function(req, res) {
-    response_body = {'Hello': 'World'} ;
+app.get("/items", function(req, res) {
+    db.all('SELECT * FROM phones', function(err, rows) {
+        if (err) {
+            console.log(err);
+        }
+        return res.json(rows);
+    });
+});
 
-    // This example returns valid JSON in the response, but does not yet set the
-    // associated HTTP response header.  This you should do yourself in your
-    // own routes!
-    res.json(response_body) ;
+app.post("/items", function(req, res) {
+    db.all()
 });
 
 // This route responds to http://localhost:3000/db-example by selecting some data from the
