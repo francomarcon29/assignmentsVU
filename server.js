@@ -23,7 +23,27 @@ app.get('/items', function(req, res) {
 });
 
 app.post("/items", function(req, res) {
-    db.all()
+    
+    const post = {
+        brand: req.body.topic,
+        model: req.body.date,
+        os: req.body.body,
+        image: req.body.images,
+        screensize: req.body.files
+      };
+
+    db.run(`INSERT INTO phones (brand, model, os, image, screensize) VALUES (?, ?, ?, ?, ?)`,
+    [brand, model, os, image, screensize], function(err) {
+      if (err) {
+        return console.log(err.message);
+      }
+      
+      console.log(`A row has been inserted`);
+    });
+  
+    
+     //db.close();
+  
 });
 
 app.get('/db-example', function(req, res) {
