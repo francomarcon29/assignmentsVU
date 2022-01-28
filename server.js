@@ -78,15 +78,11 @@ app.put('/items/:id', function(req, res){
 
     db.run(`UPDATE phones SET brand = ?, model = ?, os = ?, image = ?, screensize, ? WHERE id = ${req.params.id}`, [item.brand, item.model, item.os, item.image, item.screensize], function(err){
         if(err){
-
-            return console.error(err.message);
-
+            return res.status(500).send(err);
+        }else{
+            return res.status(200).send();
         }
-
-        console.log(`Row updated`);
     })
-
-
 });
 
 
