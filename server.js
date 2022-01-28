@@ -66,6 +66,30 @@ app.delete('/items/:id', function(req, res) {
     });
 });
 
+app.put('/items/:id', function(req, res){
+
+    const item = {
+        brand: req.body.topic,
+        model: req.body.date,
+        os: req.body.body,
+        image: req.body.images,
+        screensize: req.body.files
+    };
+
+    db.run(`UPDATE phones SET brand = ?, model = ?, os = ?, image = ?, screensize, ? WHERE id = ${req.params.id}`, [item.brand, item.model, item.os, item.image, item.screensize], function(err){
+        if(err){
+
+            return console.error(err.message);
+
+        }
+
+        console.log(`Row updated`);
+    })
+
+
+});
+
+
 const port = process.env.PORT || 3000;
 app.listen(port, () => console.log(`Listening on port ${port}...`));
 
