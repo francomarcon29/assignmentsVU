@@ -47,6 +47,30 @@ app.post('/items', function(req, res) {
   
 });
 
+app.put('/items/:id', function(req, res){
+
+    const item = {
+        brand: req.body.topic,
+        model: req.body.date,
+        os: req.body.body,
+        image: req.body.images,
+        screensize: req.body.files
+    };
+
+    db.run(`UPDATE phones SET brand = ?, model = ?, os = ?, image = ?, screensize, ? WHERE id = ${req.params.id}`, [item.brand, item.model, item.os, item.image, item.screensize], function(err){
+        if(err){
+
+            return console.error(err.message);
+
+        }
+
+        console.log(`Row updated`);
+    })
+
+
+
+})
+
 app.get('/db-example', function(req, res) {
     db.all(`SELECT * FROM phones WHERE id=?`, ['Fairphone'], function(err, rows) {
 
