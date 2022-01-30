@@ -5,6 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>API Docs</title>
+    <!-- Styles below are just for your readability, couldn't put them in a css file due to assignment constraints -->
+    <style>
+        th  {
+            text-align: left;
+            min-width: 90px;
+        }
+        h1 {
+            margin-bottom: 0px;
+        }
+        h3 {
+            margin-top: 30px;
+        }
+        table {
+            margin-bottom: 40px;
+        }
+    </style>
 </head>
 <body>
     <div class='endpoint'>
@@ -55,8 +71,8 @@
     </div>
     <div class='endpoint'>
         <h1>POST /items</h1>
-        <p>Add one item</p>
-        <p>all request fields are required</p>
+        <p>Add an item</p>
+        <p>All request body fields are required</p>
         <h3>JSON request body fields</h3>
         <table>
             <thead>
@@ -99,52 +115,10 @@
                 </tr>
             </tbody>
         </table>
-        <h3>JSON response body fields</h3>
-        <table>
-            <thead>
-                <tr>
-                    <th>Name</th>
-                    <th>Type</th>
-                    <th>Description</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>id</td>
-                    <td>String</td>
-                    <td>The unique id of the item added</td>
-                </tr>
-                <tr>
-                    <td>brand</td>
-                    <td>String</td>
-                    <td>The brand name of the item added</td>
-                </tr>
-                <tr>
-                    <td>model</td>
-                    <td>String</td>
-                    <td>The model name of the item added</td>
-                </tr>
-                <tr>
-                    <td>os</td>
-                    <td>String</td>
-                    <td>The operating system of the item added</td>
-                </tr>
-                <tr>
-                    <td>image</td>
-                    <td>String</td>
-                    <td>The image URL of the item added</td>
-                </tr>
-                <tr>
-                    <td>screensize</td>
-                    <td>Number</td>
-                    <td>The screen size of the item added</td>
-                </tr>
-            </tbody>
-        </table>
     </div>
     <div class='endpoint'>
         <h1>GET /items/:id</h1>
-        <p>Retrieve one item by its id</p>
+        <p>Retrieve an item by its id</p>
         <h3>Path parameters</h3>
         <table>
             <thead>
@@ -226,7 +200,7 @@
             </tbody>
         </table>
         <h3>JSON request body fields</h3>
-        <p>all request fields are optional</p>
+        <p>All request body fields are optional</p>
         <table>
             <thead>
                 <tr>
@@ -260,48 +234,6 @@
                     <td>screensize</td>
                     <td>Number</td>
                     <td>The screen size of the item to be updated</td>
-                </tr>
-            </tbody>
-        </table>
-        <h3>JSON response body fields</h3>
-        <table>
-            <thead>
-                <tr>
-                    <th>Name</th>
-                    <th>Type</th>
-                    <th>Description</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>id</td>
-                    <td>String</td>
-                    <td>The unique id of the item updated</td>
-                </tr>
-                <tr>
-                    <td>brand</td>
-                    <td>String</td>
-                    <td>The brand name of the item updated</td>
-                </tr>
-                <tr>
-                    <td>model</td>
-                    <td>String</td>
-                    <td>The model name of the item updated</td>
-                </tr>
-                <tr>
-                    <td>os</td>
-                    <td>String</td>
-                    <td>The operating system of the item updated</td>
-                </tr>
-                <tr>
-                    <td>image</td>
-                    <td>String</td>
-                    <td>The image URL of the item updated</td>
-                </tr>
-                <tr>
-                    <td>screensize</td>
-                    <td>Number</td>
-                    <td>The screen size of the item updated</td>
                 </tr>
             </tbody>
         </table>
