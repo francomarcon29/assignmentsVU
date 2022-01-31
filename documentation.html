@@ -4,12 +4,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>API Docs</title>
+    <title>Phones API Documentation</title>
     <!-- Styles below are just for your readability, couldn't put them in a css file due to assignment constraints -->
     <style>
-        th  {
-            text-align: left;
-            min-width: 90px;
+        body {
+            margin: 0;
+            background: rgb(32,32,32);
+            color: white;
+        }
+        div {
+            scroll-margin-top: 30px;
+        }
+        .navbar {
+            display: flex;
+            justify-content: center;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgb(24,24,24);;
         }
         h1 {
             margin-bottom: 0px;
@@ -17,13 +29,39 @@
         h3 {
             margin-top: 30px;
         }
-        table {
+        .endpoint {
+            width: 50%;
+            margin: 0 auto;
             margin-bottom: 40px;
+        }
+        table {
+            border-collapse: collapse;
+        }
+        th  {
+            text-align: left;
+            min-width: 90px;
+        }
+        td, th {
+            border: 1px white solid;
+            padding: 5px;
+        }
+        a {
+            margin-right: 20px;
+        }
+        a, :visited {
+            color: white;
         }
     </style>
 </head>
 <body>
-    <div class='endpoint'>
+    <div class='navbar'>
+        <a href='#get-items'>GET /items</a>
+        <a href='#post-items'>POST /items</a>
+        <a href='#get-items-id'>GET /items/:id</a>
+        <a href='#put-items-id'>PUT /items/:id</a>
+        <a href='#delete-items-id'>DELETE /items/:id</a>
+    </div> 
+    <div class='endpoint' id='get-items'>
         <h1>GET /items</h1>
         <p>Retrieve all items</p>
         <h3>JSON response body fields</h3>
@@ -38,7 +76,7 @@
             <tbody>
                 <tr>
                     <td>id</td>
-                    <td>String</td>
+                    <td>Integer</td>
                     <td>The unique id of the item retrieved</td>
                 </tr>
                 <tr>
@@ -68,8 +106,27 @@
                 </tr>
             </tbody>
         </table>
+        <h3>Response codes</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Response code</th>
+                    <th>Meaning</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>200</td>
+                    <td>Succesfully retrieved all items</td>
+                </tr>
+                <tr>
+                    <td>500</td>
+                    <td>Server encountered an error while trying to retrieve all items</td>
+                </tr>
+            </tbody>
+        </table>
     </div>
-    <div class='endpoint'>
+    <div class='endpoint' id='post-items'>
         <h1>POST /items</h1>
         <p>Add an item</p>
         <p>All request body fields are required</p>
@@ -83,11 +140,6 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>id</td>
-                    <td>String</td>
-                    <td>The unique id of the item to be added</td>
-                </tr>
                 <tr>
                     <td>brand</td>
                     <td>String</td>
@@ -115,8 +167,31 @@
                 </tr>
             </tbody>
         </table>
+        <h3>Response codes</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Response code</th>
+                    <th>Meaning</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>200</td>
+                    <td>Succesfully added an item to the database</td>
+                </tr>
+                <tr>
+                    <td>400</td>
+                    <td>Client sent invalid JSON in the request body</td>
+                </tr>
+                <tr>
+                    <td>500</td>
+                    <td>Server encountered an error while trying to add an item to the database</td>
+                </tr>
+            </tbody>
+        </table>
     </div>
-    <div class='endpoint'>
+    <div class='endpoint' id='get-items-id'>
         <h1>GET /items/:id</h1>
         <p>Retrieve an item by its id</p>
         <h3>Path parameters</h3>
@@ -131,7 +206,7 @@
             <tbody>
                 <tr>
                     <td>id</td>
-                    <td>String</td>
+                    <td>Integer</td>
                     <td>The unique id of the item to be retrieved</td>
                 </tr>
             </tbody>
@@ -148,7 +223,7 @@
             <tbody>
                 <tr>
                     <td>id</td>
-                    <td>String</td>
+                    <td>Integer</td>
                     <td>The unique id of the item retrieved</td>
                 </tr>
                 <tr>
@@ -178,8 +253,27 @@
                 </tr>
             </tbody>
         </table>
+        <h3>Response codes</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Response code</th>
+                    <th>Meaning</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>200</td>
+                    <td>Succesfully queried database for an item with the given id, response body can be an empty list if there are no such items</td>
+                </tr>
+                <tr>
+                    <td>500</td>
+                    <td>Server encountered an error while trying to get the item with the given id</td>
+                </tr>
+            </tbody>
+        </table>
     </div>
-    <div class='endpoint'>
+    <div class='endpoint' id='put-items-id'>
         <h1>PUT /items/:id</h1>
         <p>Update the data of an item by its id</p>
         <h3>Path parameters</h3>
@@ -194,7 +288,7 @@
             <tbody>
                 <tr>
                     <td>id</td>
-                    <td>String</td>
+                    <td>Integer</td>
                     <td>The unique id of the item to be updated</td>
                 </tr>
             </tbody>
@@ -237,8 +331,31 @@
                 </tr>
             </tbody>
         </table>
+        <h3>Response codes</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Response code</th>
+                    <th>Meaning</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>200</td>
+                    <td>Succesfully modified the item with the given id</td>
+                </tr>
+                <tr>
+                    <td>400</td>
+                    <td>Client sent invalid JSON in the request body</td>
+                </tr>
+                <tr>
+                    <td>500</td>
+                    <td>Server encountered an error while trying to modify the item with the given id</td>
+                </tr>
+            </tbody>
+        </table>
     </div>
-    <div class='endpoint'>
+    <div class='endpoint' id='delete-items-id'>
         <h1>DELETE /items/:id</h1>
         <p>Delete an item by its id</p>
         <h3>Path parameters</h3>
@@ -253,8 +370,27 @@
             <tbody>
                 <tr>
                     <td>id</td>
-                    <td>String</td>
+                    <td>Integer</td>
                     <td>The unique id of the item to be deleted</td>
+                </tr>
+            </tbody>
+        </table>
+        <h3>Response codes</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Response code</th>
+                    <th>Meaning</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>200</td>
+                    <td>Succesfully deleted the item with the given id</td>
+                </tr>
+                <tr>
+                    <td>500</td>
+                    <td>Server encountered an error while trying to delete the item with the given id</td>
                 </tr>
             </tbody>
         </table>
