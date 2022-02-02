@@ -19,6 +19,12 @@ app.use(express.urlencoded({extended: false}));
 
 const path = require('path');
 
+
+
+
+
+//GET
+
 app.get('/', function getItemsController(req, res) {
     db.all('SELECT * FROM phones', (err, phones) => {
         if (err) {
@@ -29,9 +35,12 @@ app.get('/', function getItemsController(req, res) {
     })
 });
 
-app.put('/items/:id', function putItemsIdController(req, res) {
-    const id = req.params.id;
+
+//PUT
+
+app.put('/items/edit', function putItemsIdController(req, res) {
     const item = {
+        id: req.body.id,
         brand: req.body.brand,
         model: req.body.model,
         os: req.body.os,
@@ -43,14 +52,18 @@ app.put('/items/:id', function putItemsIdController(req, res) {
         return res.status(400).send('Screensize has to be a number'); // TODO: number?
     }
 
-    db.run('UPDATE phones SET brand=?, model=?, os=?, image=?, screensize=? WHERE id=?', [item.brand, item.model, item.os, item.image, item.screensize, id], (err) => {
+    db.run('UPDATE phones SET brand=?, model=?, os=?, image=?, screensize=? WHERE id=?', [item.id, item.brand, item.model, item.os, item.image, item.screensize, id], (err) => {
         if (err) {
             return res.status(500).send(err);
         } else {
-            return res.status(200).send();
+            return res.redirect('/#main_table');
         }
     });
 })
+
+
+
+//DELETE
 
 app.get('/items/delete/:id', function deleteItemsIdController(req, res) {
     const id = req.params.id;
@@ -63,6 +76,36 @@ app.get('/items/delete/:id', function deleteItemsIdController(req, res) {
         }
     });
 })
+
+
+//POST
+
+app.post('/items/post', function postItemsController(req, res) {
+    const item = {
+        brand: req.body.brand,
+        model: req.body.model,
+        os: req.body.os,
+        image: req.body.image,
+        screensize: req.body.screensize
+    };
+
+console.dir(item)
+
+/*
+    if (typeof item.screensize != 'number') {
+        return res.status(400).send('Screensize has to be a number'); // TODO: number?
+    }*/
+
+    db.run('INSERT INTO phones (brand, model, os, image, screensize) VALUES (?, ?, ?, ?, ?)',
+    [JSON.stringify(item.brand, item.model, item.os, item.image, item.screensize)], (err) => {
+        if (err) {
+            return res.status(500).send(err);
+        } else {
+            res.redirect('/#main_table')
+        }
+    });
+})
+
 
 
 
@@ -111,7 +154,7 @@ function getItemsIdController(req, res) {
         }
     });
 }
-*/
+*//*
 function postItemsController(req, res) {
     const item = {
         brand: req.body.brand,
@@ -133,8 +176,8 @@ function postItemsController(req, res) {
             return res.status(200).send();
         }
     });
-}
-
+}*/
+/*
 function deleteItemsIdController(req, res) {
     const id = req.params.id;
 
@@ -145,7 +188,7 @@ function deleteItemsIdController(req, res) {
             return res.status(200).send();
         }
     });
-}
+}*/
 /*
 function putItemsIdController(req, res) {
     const id = req.params.id;
