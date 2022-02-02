@@ -17,8 +17,7 @@
         <div class="navbar-boxes">
             <div class="navbar-logo">
                 <figure>
-                    <img class="logo"
-                        src="https://i.imgur.com/oXfTzA0.png" alt="logo">
+                    <img class="logo" src="https://i.imgur.com/oXfTzA0.png" alt="logo">
                 </figure>
             </div>
             <div class="navbar-item">
@@ -44,7 +43,7 @@
                 Our experts are waiting for you with their advice.
             </p>
             <abbr title="'mobile' ASCII art">
-              <pre>
+                <pre>
                 _     _ _      
                 | |   (_) |     
 _ __ ___   ___ | |__  _| | ___ 
@@ -52,7 +51,7 @@ _ __ ___   ___ | |__  _| | ___
 | | | | | | (_) | |_) | | |  __/
 |_| |_| |_|\___/|_.__/|_|_|\___|
               </pre>
-          </abbr>
+            </abbr>
         </div>
     </div>
 
@@ -69,7 +68,7 @@ _ __ ___   ___ | |__  _| | ___
                         <tr class="bodyRows">
                             <th><button>ID</button></th>
                             <th><button>Brand</button></th>
-                            <th><button>Model</button</th>
+                            <th><button>Model</button< /th>
                             <th><abbr title="Operating System"><button>OS</button></abbr></th>
                             <th><button>Screensize</button></th>
                             <th><button>Image</button></th>
@@ -77,57 +76,70 @@ _ __ ___   ___ | |__  _| | ___
                         </tr>
                     </thead>
                     <tbody>
-                        <% phones.forEach(phone => { %>
-                        <tr class='bodyRows'>
-                            <td><%= phone.id %></td>                           
-                            <td><%= phone.brand %></td>
-                            <td><%= phone.model %></td>
-                            <td><%= phone.os %></td>
-                            <td><%= phone.screensize %></td>
-                            <td><img alt='<%= phone.brand %> <%= phone.model %>' src='<%= phone.image %>' class='phone-img'></td>
-                            <td><a href="/items/delete/<%= phone.id %>"><ion-icon name="close-circle-sharp" style="color: red;"></ion-icon></a></td>
-                        </tr>
-                        <% }) %>
+                        <% phones.forEach(phone=> { %>
+                            <tr class='bodyRows'>
+                                <td>
+                                    <%= phone.id %>
+                                </td>
+                                <td>
+                                    <%= phone.brand %>
+                                </td>
+                                <td>
+                                    <%= phone.model %>
+                                </td>
+                                <td>
+                                    <%= phone.os %>
+                                </td>
+                                <td>
+                                    <%= phone.screensize %>
+                                </td>
+                                <td><img alt='<%= phone.brand %> <%= phone.model %>' src='<%= phone.image %>'
+                                        class='phone-img'></td>
+                                <td><a href="/items/delete/<%= phone.id %>">
+                                        <ion-icon name="close-circle-sharp" style="color: red;"></ion-icon>
+                                    </a></td>
+                            </tr>
+                            <% }) %>
                     </tbody>
                     <tfoot>
                         <tr>
-                            <td><input title="Input the phone brand here" form="model-form" required type="text" id="brand" name="brand"
-                                    placeholder="Brand" class="inputForm"></td>
-                            <td><input title="Input the phone model here" form="model-form" required type="text" id="model" name="model"
-                                    placeholder="Model" class="inputForm"></td>
-                            <td><input title="Input the phone OS here" form="model-form" required type="text" id="os" name="os" placeholder="OS"
-                                    class="inputForm"></td>
-                            <td><input title="Input the phone screensize here" form="model-form" required type="number" id="screensize" name="screensize"
-                                    placeholder="Screensize" class="inputForm">
+                            <td><input title="Input the phone brand here" form="model-form" required type="text"
+                                    id="brand" name="brand" placeholder="Brand" class="inputForm"></td>
+                            <td><input title="Input the phone model here" form="model-form" required type="text"
+                                    id="model" name="model" placeholder="Model" class="inputForm"></td>
+                            <td><input title="Input the phone OS here" form="model-form" required type="text" id="os"
+                                    name="os" placeholder="OS" class="inputForm"></td>
+                            <td><input title="Input the phone screensize here" form="model-form" required type="number"
+                                    id="screensize" name="screensize" placeholder="Screensize" class="inputForm">
                             </td>
-                            <td><input title="Input the phone image URL here" form="model-form" required type="text" id="image" name="image"
-                                    placeholder="Image URI" class="inputForm"></td>
+                            <td><input title="Input the phone image URL here" form="model-form" required type="text"
+                                    id="image" name="image" placeholder="Image URI" class="inputForm"></td>
                         </tr>
                         <tr class="submit-row">
                             <td colspan="5">
-                                <input title="Button to submit a new model" type="submit" value="Submit a New Model" form="model-form"
-                                    class="model-submit" />
+                                <input title="Button to submit a new model" type="submit" value="Submit a New Model"
+                                    form="model-form" class="model-submit" />
                             </td>
                         </tr>
                         <tr id="edit-row">
-                            <td><input title="Update the phone id here" form="model-put" required type="number" id="id" name="id"
-                                placeholder="ID" class="inputForm"></td>
-                            <td><input title="Update the phone brand here" form="model-put" required type="text" id="brand" name="brand"
-                                    placeholder="Brand" class="inputForm"></td>
-                            <td><input title="Update the phone model here" form="model-put" required type="text" id="model" name="model"
-                                    placeholder="Model" class="inputForm"></td>
-                            <td><input title="Update the phone OS here" form="model-put" required type="text" id="os" name="os" placeholder="OS"
-                                    class="inputForm"></td>
-                            <td><input title="Update the phone scrensize here" form="model-put" required type="number" id="screensize" name="screensize"
-                                    placeholder="Screensize" class="inputForm">
+                            <td><input title="Update the phone id here" form="model-put" required type="number" id="id"
+                                    name="id" placeholder="ID" class="inputForm"></td>
+                            <td><input title="Update the phone brand here" form="model-put" required type="text"
+                                    id="brand" name="brand" placeholder="Brand" class="inputForm"></td>
+                            <td><input title="Update the phone model here" form="model-put" required type="text"
+                                    id="model" name="model" placeholder="Model" class="inputForm"></td>
+                            <td><input title="Update the phone OS here" form="model-put" required type="text" id="os"
+                                    name="os" placeholder="OS" class="inputForm"></td>
+                            <td><input title="Update the phone scrensize here" form="model-put" required type="number"
+                                    id="screensize" name="screensize" placeholder="Screensize" class="inputForm">
                             </td>
-                            <td><input title="Update the phone image URL here" form="model-put" required type="text" id="image" name="image"
-                                    placeholder="Image URI" class="inputForm"></td>                       
+                            <td><input title="Update the phone image URL here" form="model-put" required type="text"
+                                    id="image" name="image" placeholder="Image URI" class="inputForm"></td>
                         </tr>
                         <tr class="submit-row">
                             <td colspan="5">
-                                <input title="Button to confirm your changes to this phone" type="submit" value="Submit a New Model" form="model-put"
-                                    class="model-submit" />
+                                <input title="Button to confirm your changes to this phone" type="submit"
+                                    value="Submit a New Model" form="model-put" class="model-submit" />
                             </td>
                         </tr>
                     </tfoot>

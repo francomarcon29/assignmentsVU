@@ -5,6 +5,13 @@ const express = require('express');
 const methodOverride = require('method-override');
 const app = express();
 
+
+var bodyParser = require('body-parser')
+
+var jsonParser = bodyParser.json()
+
+
+
 app.set('view engine', 'ejs');
 
 app.use(express.json());
@@ -15,7 +22,7 @@ app.use(methodOverride('_method'));
 
 app.use(express.static('public'));
 
-app.use(express.urlencoded({extended: false}));
+app.use(express.urlencoded({ extended: false }));
 
 const path = require('path');
 
@@ -30,7 +37,7 @@ app.get('/', function getItemsController(req, res) {
         if (err) {
             return res.status(500).send(err);
         } else {
-            res.render(path.resolve("./index.ejs"), {phones});
+            res.render(path.resolve("./index.ejs"), { phones });
         }
     })
 });
@@ -89,21 +96,21 @@ app.post('/items/post', function postItemsController(req, res) {
         screensize: req.body.screensize
     };
 
-console.dir(item)
+    console.dir(item)
 
-/*
-    if (typeof item.screensize != 'number') {
-        return res.status(400).send('Screensize has to be a number'); // TODO: number?
-    }*/
+    /*
+        if (typeof item.screensize != 'number') {
+            return res.status(400).send('Screensize has to be a number'); // TODO: number?
+        }*/
 
     db.run('INSERT INTO phones (brand, model, os, image, screensize) VALUES (?, ?, ?, ?, ?)',
-    [JSON.stringify(item.brand, item.model, item.os, item.image, item.screensize)], (err) => {
-        if (err) {
-            return res.status(500).send(err);
-        } else {
-            res.redirect('/#main_table')
-        }
-    });
+        [JSON.stringify(item.brand, item.model, item.os, item.image, item.screensize)], (err) => {
+            if (err) {
+                return res.status(500).send(err);
+            } else {
+                res.redirect('/#main_table')
+            }
+        });
 })
 
 
@@ -214,15 +221,15 @@ function putItemsIdController(req, res) {
 }*/
 
 function myDatabase(filename) {
-	const db = new sqlite.Database(filename, (err) => {
-  		if (err) {
-			console.error(err.message);
-  		}
-  		console.log('Connected to the phones database');
-	});
-    
-	db.serialize(() => {
-		db.run(`
+    const db = new sqlite.Database(filename, (err) => {
+        if (err) {
+            console.error(err.message);
+        }
+        console.log('Connected to the phones database');
+    });
+
+    db.serialize(() => {
+        db.run(`
         	CREATE TABLE IF NOT EXISTS phones (
             id 	INTEGER PRIMARY KEY,
         	brand	CHAR(100) NOT NULL,
@@ -232,18 +239,18 @@ function myDatabase(filename) {
         	screensize INTEGER NOT NULL
         	);
         `);
-		db.all('SELECT COUNT(*) AS count FROM phones', (err, result) => {
-			if (result[0].count === 0) {
-				db.run('INSERT INTO phones (brand, model, os, image, screensize) VALUES (?, ?, ?, ?, ?)',
-				['Fairphone', 'FP3', 'Android', 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Fairphone_3_modules_on_display.jpg/320px-Fairphone_3_modules_on_display.jpg', '5.65']);
-				console.log('Inserted dummy phone entry into empty database');
-			} else {
-				console.log('Database already contains', result[0].count, 'item(s) at startup');
-			}
-		});
-	});
+        db.all('SELECT COUNT(*) AS count FROM phones', (err, result) => {
+            if (result[0].count === 0) {
+                db.run('INSERT INTO phones (brand, model, os, image, screensize) VALUES (?, ?, ?, ?, ?)',
+                    ['Fairphone', 'FP3', 'Android', 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Fairphone_3_modules_on_display.jpg/320px-Fairphone_3_modules_on_display.jpg', '5.65']);
+                console.log('Inserted dummy phone entry into empty database');
+            } else {
+                console.log('Database already contains', result[0].count, 'item(s) at startup');
+            }
+        });
+    });
 
-	return db;
+    return db;
 }
 
 /*
