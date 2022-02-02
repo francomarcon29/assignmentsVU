@@ -326,6 +326,14 @@ em {
     border: 0;
 }
 
+abbr {
+  text-decoration: none;
+}
+
+button:hover, a:hover, .navbar-item:hover {
+  font-weight: bold;
+}
+
 @media print {
     section {
         page-break-before: always;
@@ -334,6 +342,12 @@ em {
     .banner {
         page-break-after: always;
     }
+}
+
+@media only screen and (max-width: 500px) {
+  .phone-img {
+    width: 50px;
+  }
 }
 
 @media only screen and (max-width: 1150px) {

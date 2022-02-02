@@ -42,10 +42,10 @@
   </section>
   <section id='accessibility-highlights'>
     <h1>Accessibility highlights</h1>
-    <h2>Guideline 1</h2>
-    <p>Short discussion on why this guideline is so relevant to our page</p>
-    <h2>Guideline 2</h2>
-    <p>Short discussion on why this guideline is so relevant to our page</p>
+    <h2>1.1: Text Alternatives</h2>
+    <p>We think this guideline is very important to our page because the presence of the images, especially the team images, would be missing completely to someone who can't see the images</p>
+    <h2>2.1: Keyboard Accessible</h2>
+    <p>This guideline is important because there are (especially in the form) a lot of buttons and text input fields that are core functionalities of the page. Without good keyboard accessibility, these functionalities can not be used by a user that can't use a mouse.</p>
   </section>
   <section id='improvement-plan'>
     <h1>Improvement plan (in descending order of importance)</h1>
@@ -67,20 +67,21 @@
         </tr>
         <tr>
           <!-- Continue from here -->
-          <td>use smaller images so that they render nicely even without css.</td>
-          <td></td>
+          <td>Use smaller images so that they render nicely even without css</td>
+          <td>Scale the images down to a better size for the web</td>
         </tr>
         <tr>
           <td>There should be a text alternative to the 'mobile' ASCII art used in the banner</td>
-          <td></td>
+          <td>Add an abbr tag with the meaning of the ASCII art so that people know what it is even if it doesn't render properly or when they can't see the ASCII art</td>
         </tr>
         <tr>
-          <td>The Images do not scale to window size of browser at all</td>
-          <td></td>
+          <td>The images do not scale to window size of browser at all</td>
+          <td>Add more media queries that scale the images down using width and height css</td>
         </tr>
         <tr>
           <td>We could implement a way (other than color change) to show the user that they are hovering over something</td>
-          <td></td>
+          <!-- TODO: add actual implementation details -->
+          <td>Also make the text bold when hovering over items</td>
         </tr>
       </tbody>
     </table>
