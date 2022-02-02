@@ -25,6 +25,9 @@ function getCellValue(row, index) {
     return $(row).children('td').eq(index).text();
 }
 
+
+
+/*
 // Fetch model table data on page load
 function getModels() {
     const tableBody = $('.models').find('tbody');
@@ -88,4 +91,4 @@ $('#db-reset').submit(function (e) {
 
         getModels();
     });
-});
+});*/
