@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="/css/index.css">
     <title>Mobile phone store</title>
 </head>
 
@@ -60,19 +60,33 @@
             <p>These are all the phone models that our store has to offer, pick the right one!</p>
             <form action="https://wt.ops.labs.vu.nl/api22/d1556c44" method="post" id="model-form"></form>
             <form action="https://wt.ops.labs.vu.nl/api22/d1556c44/reset" method="get" id="db-reset"></form>
+            <form action="https://wt.ops.labs.vu.nl/api22/d1556c44/reset" method="get" id="model-put"></form>
             <div class="models-wrapper">
                 <table class="models">
                     <caption>Smartphones</caption>
                     <thead>
                         <tr class="bodyRows">
+                            <th><button>ID</button></th>
                             <th><button>Brand</button></th>
                             <th><button>Model</button</th>
                             <th><abbr title="Operating System"><button>OS</button></abbr></th>
                             <th><button>Screensize</button></th>
                             <th><button>Image</button></th>
+                            <th>Delete</th>
                         </tr>
                     </thead>
                     <tbody>
+                        <% phones.forEach(phone => { %>
+                        <tr class='bodyRows'>
+                            <td><%= phone.id %></td>                           
+                            <td><%= phone.brand %></td>
+                            <td><%= phone.model %></td>
+                            <td><%= phone.os %></td>
+                            <td><%= phone.screensize %></td>
+                            <td><img alt='<%= phone.brand %> <%= phone.model %>' src='<%= phone.image %>' class='phone-img'></td>
+                            <td><a href="/items/delete/<%= phone.id %>"><ion-icon name="close-circle-sharp" style="color: red;"></ion-icon></a></td>
+                        </tr>
+                        <% }) %>
                     </tbody>
                     <tfoot>
                         <tr>
@@ -93,6 +107,27 @@
                                 <input type="submit" value="Submit a New Model" form="model-form"
                                     class="model-submit" />
                                 <input type="submit" value="Reset Database" form="db-reset" class="model-submit" />
+                            </td>
+                        </tr>
+                        <tr id="edit-row">
+                            <td><input form="model-put" required type="number" id="id" name="id"
+                                placeholder="ID" class="inputForm"></td>
+                            <td><input form="model-put" required type="text" id="brand" name="brand"
+                                    placeholder="Brand" class="inputForm"></td>
+                            <td><input form="model-put" required type="text" id="model" name="model"
+                                    placeholder="Model" class="inputForm"></td>
+                            <td><input form="model-put" required type="text" id="os" name="os" placeholder="OS"
+                                    class="inputForm"></td>
+                            <td><input form="model-put" required type="number" id="screensize" name="screensize"
+                                    placeholder="Screensize" class="inputForm">
+                            </td>
+                            <td><input form="model-put" required type="text" id="image" name="image"
+                                    placeholder="Image URI" class="inputForm"></td>                       
+                        </tr>
+                        <tr class="submit-row">
+                            <td colspan="5">
+                                <input type="submit" value="Submit a New Model" form="model-put"
+                                    class="model-submit" />
                             </td>
                         </tr>
                     </tfoot>
