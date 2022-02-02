@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Report Lab176</title>
+  <style>
+    table {
+      border-collapse: collapse;
+    }
+    th  {
+      text-align: left;
+      min-width: 90px;
+    }
+    td, th {
+      border: 1px black solid;
+      padding: 5px;
+      vertical-align: top;
+    }
+    ul, ol {
+      margin: 0;
+      padding: 0;
+      list-style-position: inside;
+    }
+    #front {
+      margin-bottom: 200px;
+    }
+  </style>
+</head>
+<body>
+  <section id='front'>
+    <h1>Web Technology</h1>
+    <h1>Self-evaluation report</h1>
+    <p>02/02/2022</p>
+    <p>Jari Kasandiredjo</p>
+    <p>Franco Marcon</p>
+  </section>
+  <section id='introduction'>
+    <h1>Introduction</h1>
+    <p>Introduction section providing a high-level overview of your page in terms of accessibility and/or usability (max 200 words)</p>
+  </section>
+  <section id='accessibility-highlights'>
+    <h1>Accessibility highlights</h1>
+    <h2>Guideline 1</h2>
+    <p>Short discussion on why this guideline is so relevant to our page</p>
+    <h2>Guideline 2</h2>
+    <p>Short discussion on why this guideline is so relevant to our page</p>
+  </section>
+  <section id='improvement-plan'>
+    <h1>Improvement plan (in descending order of importance)</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>Improvement</th>
+          <th>Implementation</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Convey the meaning of the input fields so that people who cannot see the input fields can still know why they are there</td>
+          <td>Add a descriptive title attribute to every input tag</td>
+        </tr>
+        <tr>
+          <td>Convey the meaning of team images when the user cannot view the images</td>
+          <td>Add descriptive alt attributes to the team img tags</td>
+        </tr>
+        <tr>
+          <!-- Continue from here -->
+          <td>use smaller images so that they render nicely even without css.</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>There should be a text alternative to the 'mobile' ASCII art used in the banner</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>The Images do not scale to window size of browser at all</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>We could implement a way (other than color change) to show the user that they are hovering over something</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+  <section id='appendices'>
+    <h1>Appendix A</h1>
+    <p>Web Content Accessibility Guidelines</p>
+    <table>
+      <thead>
+        <tr>
+          <th>Guideline</th>
+          <th>Improvements</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1.1: Text Alternatives</td>
+          <td>
+            <ol>
+              <li>Images under 'The team' should have a descriptive alt attribute</li>
+              <li>Phone form input tags should have a descriptive title attribute</li>
+              <li>There should be a text alternative to the 'mobile' ASCII art used in the banner</li>
+            </ol>
+          </td>
+        </tr>
+        <tr>
+          <td>1.3: Adaptable</td>
+          <td>One improvement. We think we have text alternatives (with the improvements of 1.1) to everything and that our layout is simple enough and doesn't get in the way of the information. The page is also usable without css but we could use smaller images so that they render nicely even without css.</td>
+        </tr>
+        <tr>
+          <td>1.4: Distinguishable</td>
+          <td>We could implement a way (other than color change) to show the user that they are hovering over something</td>
+        </tr>
+        <tr>
+          <td>2.1: Keyboard Accessible</td>
+          <td>No improvements. You can access all of the links, buttons and form inputs using the TAB key and the keyboard focus never gets trapped</td>
+        </tr>
+        <tr>
+          <td>2.4: Navigable</td>
+          <td>No improvements. There is no repeated content, the title is descriptive, we don't have a specific order and every link has descriptive link text</td>
+        </tr>
+      </tbody>
+    </table>
+    <h1>Appendix B</h1>
+    <p>TA Feedback Assignment 1 & 2</p>
+    <table>
+      <thead>
+        <tr>
+          <th>Feedback</th>
+          <th>Related to</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>One error in the w3 validator</td>
+          <td>Technical implementation, has no impact on usability or accessibility</td>
+        </tr>
+        <tr>
+          <td>The Images do not scale to window size of browser at all</td>
+          <td>Negative aspect, could be used to improve the usability or accessibility</td>
+        </tr>
+        <tr>
+          <td>Adding some fake elements into the table, I found the sorting to work. It is not a very dynamic function, it would be best to take the row number and tableID as parameters so you can resuse the function on other tables</td>
+          <td>Technical implementation, has no impact on usability or accessibility</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+</body>
+</html>
