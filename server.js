@@ -6,7 +6,25 @@ const app = express();
 
 app.use(express.json());
 
-app.get('/items', (req, res) => {
+// TODO: split controllers into controller and service
+// TODO: add tests for every route and make them runnable via `npm test`
+// TODO: make index.html work with this server and modify it to support all CRUD operations
+// TODO: change JSON response body fields in docs to h3> Response body p> JSON blabla MIME
+
+app.get('/items', getItemsController(req, res));
+
+app.get('/items/:id', getItemsIdController(req, res));
+
+app.post('/items', postItemsController(req, res));
+
+app.delete('/items/:id', deleteItemsIdController(req, res));
+
+app.put('/items/:id', putItemsIdController(req, res));
+
+const port = process.env.PORT || 3000;
+app.listen(port, () => console.log(`Listening on port ${port}...`));
+
+function getItemsController(req, res) {
     db.all('SELECT * FROM phones', (err, rows) => {
         if (err) {
             return res.status(500).send(err);
@@ -14,11 +32,11 @@ app.get('/items', (req, res) => {
             return res.json(rows);
         }
     });
-});
+}
 
-app.get('/items/:id', (req, res) => {
+function getItemsIdController(req, res) {
     const id = req.params.id;
-    
+
     db.all('SELECT * FROM phones WHERE id=?', id, (err, rows) => {
         if (err) {
             return res.status(500).send(err);
@@ -26,9 +44,9 @@ app.get('/items/:id', (req, res) => {
             return res.json(rows);
         }
     });
-});
+}
 
-app.post('/items', (req, res) => {
+function postItemsController(req, res) {
     const item = {
         brand: req.body.brand,
         model: req.body.model,
@@ -49,9 +67,9 @@ app.post('/items', (req, res) => {
             return res.status(200).send();
         }
     });
-});
+}
 
-app.delete('/items/:id', (req, res) => {
+function deleteItemsIdController(req, res) {
     const id = req.params.id;
 
     db.run('DELETE FROM phones WHERE id=?', id, (err) => {
@@ -61,9 +79,9 @@ app.delete('/items/:id', (req, res) => {
             return res.status(200).send();
         }
     });
-});
+}
 
-app.put('/items/:id', (req, res) => {
+function putItemsIdController(req, res) {
     const id = req.params.id;
     const item = {
         brand: req.body.brand,
@@ -84,10 +102,7 @@ app.put('/items/:id', (req, res) => {
             return res.status(200).send();
         }
     });
-});
-
-const port = process.env.PORT || 3000;
-app.listen(port, () => console.log(`Listening on port ${port}...`));
+}
 
 function myDatabase(filename) {
 	const db = new sqlite.Database(filename, (err) => {
@@ -121,3 +136,10 @@ function myDatabase(filename) {
 
 	return db;
 }
+
+exports.myDatabase = myDatabase;
+exports.getItemsController = getItemsController;
+exports.postItemsController = postItemsController;
+exports.getItemsIdController = getItemsIdController;
+exports.putItemsIdController = putItemsIdController;
+exports.deleteItemsIdController = deleteItemsIdController;
